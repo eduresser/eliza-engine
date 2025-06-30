@@ -44,7 +44,7 @@ def initialize_session_state():
         st.session_state.template_selection = DEFAULT_SCRIPT
 
 def render_config_screen():
-    st.title("🤖 Eliza Chatbot Configuration")
+    st.title("🤖 Eliza Engine Configuration")
     st.markdown("Choose a script, upload your own JSON script, or write a custom script below.")
 
     templates = load_templates()
