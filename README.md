@@ -1,6 +1,6 @@
-# **Eliza-Engine: A Script-Based Chatbot Framework**
+# **Eliza Engine: A Script-Based Chatbot Framework**
 
-**Eliza-Engine** is an extensible, script-based chatbot framework inspired by Joseph Weizenbaum's original ELIZA program. This project goes beyond a simple replica by providing a robust engine that can be loaded with any personality (or "persona") defined in a JSON script. It features a modern Python backend, strong data validation, and a friendly web interface for interaction.
+**Eliza Engine** is an extensible, script-based chatbot framework inspired by Joseph Weizenbaum's original ELIZA program. This project goes beyond a simple replica by providing a robust engine that can be loaded with any personality (or "persona") defined in a JSON script. It features a modern Python backend, strong data validation, and a friendly web interface for interaction.
 
 The core idea is to separate the chatbot's logic from its personality. The Python engine handles the conversation flow, while simple JSON files define what the chatbot says and how it reacts. This allows anyone to create entirely new chatbot characters without writing any Python code.
 
