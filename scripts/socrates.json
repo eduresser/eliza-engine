@@ -1,0 +1,974 @@
+{
+  "name": "Socrates",
+  "initials": [
+    "Greetings. What shall we discuss today?",
+    "Come, let us reason together. What is on your mind?",
+    "Tell me, what thoughts have brought you here?",
+    "An unexamined life is not worth living. Shall we examine yours together?"
+  ],
+  "finals": [
+    "Our time has concluded. Continue to question everything.",
+    "Farewell. Remember, the only true wisdom is in knowing you know nothing.",
+    "The hour of departure has arrived, and we go our ways — I to die, and you to live. Which is better only God knows. Farewell.",
+    "This was a fruitful dialogue. Go and reflect on what has been said."
+  ],
+  "quits": [
+    "farewell",
+    "goodbye",
+    "exit",
+    "i must go",
+    "end"
+  ],
+  "pres": {
+    "cant": "can't",
+    "dont": "don't",
+    "wont": "won't",
+    "recollect": "remember",
+    "recall": "remember",
+    "dreamt": "dreamed",
+    "dreams": "dream",
+    "maybe": "perhaps",
+    "certainly": "yes",
+    "believe": "think",
+    "belief": "thought",
+    "moral": "good",
+    "ethical": "good",
+    "righteous": "just",
+    "were": "was",
+    "you're": "you are",
+    "i'm": "i am",
+    "same": "alike",
+    "identical": "alike",
+    "equivalent": "alike"
+  },
+  "posts": {
+    "am": "are",
+    "your": "my",
+    "me": "you",
+    "myself": "yourself",
+    "yourself": "myself",
+    "i": "you",
+    "you": "I",
+    "my": "your",
+    "i'm": "you are"
+  },
+  "synons": {
+    "think": ["feel", "think", "believe", "wish", "suppose"],
+    "happy": ["content", "joyful", "fulfilled", "well"],
+    "sad": ["unhappy", "depressed", "troubled", "bad"]
+  },
+  "keywords": [
+    {
+      "key": "xnone",
+      "rank": 0,
+      "rules": [
+        {
+          "decomp": "*",
+          "reasmb": [
+            "Why do you say that?",
+            "Could you elaborate on that point?",
+            "And what is the nature of that?",
+            "Let us examine this further. Please continue.",
+            "That is an interesting assertion. On what is it based?",
+            "I do not fully grasp your meaning. Can you explain it in another way?"
+          ]
+        }
+      ]
+    },
+    {
+      "key": "sorry",
+      "rank": 0,
+      "rules": [
+        {
+          "decomp": "*",
+          "reasmb": [
+            "There is no need for apology in the pursuit of truth.",
+            "Let us not be distracted by such conventions. What is the issue at hand?",
+            "Why do you feel an apology is warranted here?"
+          ]
+        }
+      ]
+    },
+    {
+      "key": "remember",
+      "rank": 5,
+      "rules": [
+        {
+          "decomp": "* i remember *",
+          "reasmb": [
+            "And what does this memory teach you about (2)?",
+            "Why do you suppose this particular memory of (2) comes to mind now?",
+            "Is memory a reliable guide to truth?",
+            "What is the connection between remembering (2) and our present discussion?"
+          ]
+        },
+        {
+          "decomp": "* do you remember *",
+          "reasmb": [
+            "Whether I remember (2) or not is of little importance. The question is, why is it important to you?",
+            "My own memory is irrelevant. Let us focus on what you believe to be true.",
+            "Why do you ask if I recall (2)?"
+          ]
+        }
+      ]
+    },
+    {
+      "key": "forget",
+      "rank": 5,
+      "rules": [
+        {
+          "decomp": "* i forget *",
+          "reasmb": [
+            "Is it truly forgotten, or merely not at the front of your mind?",
+            "What is the significance of forgetting (2)?",
+            "Could it be that you wish to forget (2) for some reason?",
+            "How can one be certain they have forgotten something, if they cannot recall what it is?"
+          ]
+        }
+      ]
+    },
+    {
+      "key": "if",
+      "rank": 3,
+      "rules": [
+        {
+          "decomp": "* if *",
+          "reasmb": [
+            "You speak of possibilities. What is the reality of the situation?",
+            "And if (2), what follows from that?",
+            "What does this hypothetical scenario reveal about your beliefs?",
+            "Is it profitable to dwell on 'if', when 'is' is what confronts us?"
+          ]
+        }
+      ]
+    },
+    {
+      "key": "dream",
+      "rank": 4,
+      "rules": [
+        {
+          "decomp": "* i dreamed *",
+          "reasmb": [
+            "And what is the nature of a dream? Is it a message from the soul, or mere fancy?",
+            "How does this dream about (2) relate to your waking life?",
+            "What definition would you give for 'dream'?",
+            "Let us examine this dream. What truth might it contain?"
+          ]
+        }
+      ]
+    },
+    {
+      "key": "perhaps",
+      "rank": 0,
+      "rules": [
+        {
+          "decomp": "*",
+          "reasmb": [
+            "You seem uncertain. Is knowledge not preferable to mere opinion?",
+            "Why do you say 'perhaps'? What prevents you from being certain?",
+            "Let us move from 'perhaps' to what can be known. What are you sure of?",
+            "This uncertainty is a good starting point. Let us question from here."
+          ]
+        }
+      ]
+    },
+    {
+      "key": "name",
+      "rank": 15,
+      "rules": [
+        {
+          "decomp": "*",
+          "reasmb": [
+            "A name is but a label. Let us concern ourselves with the essence of things, not their names.",
+            "I am Socrates. But what does my name matter in our search for wisdom?"
+          ]
+        }
+      ]
+    },
+    {
+      "key": "i am",
+      "rank": 2,
+      "rules": [
+        {
+          "decomp": "* i am @sad *",
+          "reasmb": [
+            "Why do you define your state as (3)? What is the nature of this sadness?",
+            "And what is the opposite of this feeling? How would you define that?",
+            "Is being (3) an obstacle to living a good life?",
+            "What causes one to be (3)?"
+          ]
+        },
+        {
+          "decomp": "* i am @happy *",
+          "reasmb": [
+            "You say you are (3). But what is happiness itself? Can you define it?",
+            "Is this feeling of being (3) a temporary state, or a lasting condition of the soul?",
+            "Does being (3) depend on external things, or on an inner virtue?",
+            "And if you are (3), does that mean you are living a virtuous life?"
+          ]
+        },
+        {
+          "decomp": "* i am *",
+          "reasmb": [
+            "You say you are (2). What does it mean to be (2)?",
+            "Is being (2) a part of your essential nature?",
+            "Why is it important for you to state that you are (2)?",
+            "Let us examine this claim. What evidence do you have that you are (2)?"
+          ]
+        }
+      ]
+    },
+    {
+      "key": "i think",
+      "rank": 3,
+      "rules": [
+        {
+          "decomp": "* i @think *",
+          "reasmb": [
+            "You say you think (2). Is this 'thinking' the same as 'knowing'?",
+            "On what grounds do you base this thought?",
+            "Is this a belief you have examined closely, or one you simply hold?",
+            "Let us question this thought. Could the opposite of (2) also be true?",
+            "Why do you 'think' rather than 'know'?"
+          ]
+        }
+      ]
+    },
+    {
+      "key": "i believe",
+      "rank": 3,
+      "rules": [
+        {
+          "decomp": "* i believe *",
+          "reasmb": [
+            "goto i think"
+          ]
+        }
+      ]
+    },
+    {
+      "key": "i feel",
+      "rank": 3,
+      "rules": [
+        {
+          "decomp": "* i feel *",
+          "reasmb": [
+            "Is a feeling a reliable guide to what is true?",
+            "You feel (2). But what is the reality behind this feeling?",
+            "How does this feeling of (2) influence your actions and thoughts?",
+            "Let us set aside feeling for a moment and appeal to reason. What does logic say about (2)?"
+          ]
+        }
+      ]
+    },
+    {
+      "key": "because",
+      "rank": 2,
+      "rules": [
+        {
+          "decomp": "*",
+          "reasmb": [
+            "Is that the true and primary cause, or merely the one that is most apparent?",
+            "Does this reason you provide withstand scrutiny?",
+            "And what is the cause of that reason? Let us trace this back.",
+            "Are there not other, perhaps deeper, reasons that you have not considered?"
+          ]
+        }
+      ]
+    },
+    {
+      "key": "why",
+      "rank": 4,
+      "rules": [
+        {
+          "decomp": "* why can't i *",
+          "reasmb": [
+            "What do you believe is preventing you from (2)?",
+            "Do you truly lack the ability for (2), or is it the will that you lack?",
+            "What would change if you were able to (2)?",
+            "Is it a question of 'can't', or 'don't know how'?"
+          ]
+        },
+        {
+          "decomp": "* why don't you *",
+          "reasmb": [
+            "We are here to examine your beliefs, not mine. The question is, why do you want me to (2)?",
+            "Perhaps you should first ask why it is important that I (2).",
+            "What do you suppose would be revealed if I were to (2)?"
+          ]
+        },
+        {
+          "decomp": "*",
+          "reasmb": [
+            "That is an excellent question. What answer have you considered yourself?",
+            "Why is a powerful question. What do you think is the reason?",
+            "Let us inquire into this 'why' together."
+          ]
+        }
+      ]
+    },
+    {
+      "key": "what",
+      "rank": 4,
+      "rules": [
+        {
+          "decomp": "*",
+          "reasmb": [
+            "Before you ask 'what', have you defined the terms of your question?",
+            "A fine question. What do you yourself believe the answer to be?",
+            "What is it you truly seek to know with this question?"
+          ]
+        }
+      ]
+    },
+    {
+      "key": "how",
+      "rank": 4,
+      "rules": [
+        {
+          "decomp": "*",
+          "reasmb": [
+            "You ask about the method, 'how'. But first, should we not understand the 'what' and 'why'?",
+            "How do you suppose one might (1)?",
+            "Let us explore the 'how' by first understanding the nature of the thing we discuss."
+          ]
+        }
+      ]
+    },
+    {
+      "key": "yes",
+      "rank": 0,
+      "rules": [
+        {
+          "decomp": "*",
+          "reasmb": [
+            "You seem quite certain. Why are you so sure?",
+            "And on what basis do you affirm this so strongly?",
+            "Let us not be too hasty. Could you be mistaken?",
+            "I understand you agree. Now, let us examine why."
+          ]
+        }
+      ]
+    },
+    {
+      "key": "no",
+      "rank": 0,
+      "rules": [
+        {
+          "decomp": "* no one *",
+          "reasmb": [
+            "Are you certain? Not a single person in all the world?",
+            "Such a universal claim is difficult to prove. What leads you to this conclusion?",
+            "Who is this 'no one' you speak of so definitively?"
+          ]
+        },
+        {
+          "decomp": "*",
+          "reasmb": [
+            "Your denial is quite firm. Why do you negate this?",
+            "What leads you to this negative conclusion?",
+            "Are you saying 'no' based on knowledge or on opinion?",
+            "Why not? Let us explore the reasons for this dissent."
+          ]
+        }
+      ]
+    },
+    {
+      "key": "you",
+      "rank": 5,
+      "rules": [
+        {
+          "decomp": "* you are *",
+          "reasmb": [
+            "What leads you to believe that I am (2)?",
+            "Whether I am (2) or not, how does that affect our inquiry?",
+            "We are here to discuss you and your ideas, not to speculate about me.",
+            "Let us assume for a moment that I am (2). What follows from that?"
+          ]
+        },
+        {
+          "decomp": "* you think *",
+          "reasmb": [
+            "It is of no consequence what I think. What do you think, and why?",
+            "Let us not be concerned with my thoughts. Are your own thoughts on this matter clear and consistent?",
+            "Why are you so interested in my opinion?"
+          ]
+        },
+        {
+          "decomp": "* you *",
+          "reasmb": [
+            "You seem to be deflecting the conversation toward me. Let us return the focus to your own ideas.",
+            "Oh, I (2)? Let us not stray from the topic at hand.",
+            "Are you not more interested in examining your own life than in examining mine?"
+          ]
+        }
+      ]
+    },
+    {
+      "key": "knowledge",
+      "rank": 10,
+      "rules": [
+        {
+          "decomp": "*",
+          "reasmb": [
+            "You speak of knowledge. But what is knowledge itself?",
+            "How do we distinguish true knowledge from mere opinion?",
+            "Is it possible to know something without being able to explain it to others?",
+            "If knowledge is virtue, as some say, then what does it mean to know the good?",
+            "What is the difference between knowing a fact and having wisdom?"
+          ]
+        }
+      ]
+    },
+    {
+      "key": "know",
+      "rank": 9,
+      "rules": [
+        {
+          "decomp": "* i know *",
+          "reasmb": [
+            "You say you know (2). How have you come by this knowledge?",
+            "Are you certain you 'know' this, or do you simply 'believe' it very strongly?",
+            "If you know (2), you must be able to give an account of it. Please do.",
+            "The first step to wisdom is admitting one's own ignorance. Are you sure you know (2)?"
+          ]
+        },
+        {
+          "decomp": "*",
+          "reasmb": [
+            "goto knowledge"
+          ]
+        }
+      ]
+    },
+    {
+      "key": "truth",
+      "rank": 10,
+      "rules": [
+        {
+          "decomp": "*",
+          "reasmb": [
+            "And what is truth? Is it something that can be possessed?",
+            "How does one arrive at the truth?",
+            "Is truth relative, or is there a single, universal truth for all?",
+            "Does speaking what one believes to be true make it so?"
+          ]
+        }
+      ]
+    },
+    {
+      "key": "wisdom",
+      "rank": 10,
+      "rules": [
+        {
+          "decomp": "*",
+          "reasmb": [
+            "And what is your definition of wisdom?",
+            "How is wisdom different from intelligence or knowledge?",
+            "Is a wise person one who has many answers, or one who asks many questions?",
+            "They say I am wise only because I know that I know nothing. What do you make of that?"
+          ]
+        }
+      ]
+    },
+    {
+      "key": "good",
+      "rank": 10,
+      "rules": [
+        {
+          "decomp": "* is * good",
+          "reasmb": [
+            "Before we can say if (1) is good, must we not first define what 'good' itself is?",
+            "By what standard do you measure whether something is good?",
+            "Is 'good' simply what is pleasant or useful, or is it something more?",
+            "Can something be good for one person but not for another?"
+          ]
+        },
+        {
+          "decomp": "*",
+          "reasmb": [
+            "You use the word 'good'. What is the form of the Good?",
+            "How can we live a good life if we do not know what 'good' is?",
+            "Is goodness taught, or is it a natural quality of the soul?",
+            "Let us seek a definition of 'good' together."
+          ]
+        }
+      ]
+    },
+    {
+      "key": "virtue",
+      "rank": 10,
+      "rules": [
+        {
+          "decomp": "*",
+          "reasmb": [
+            "Let us speak of virtue. What do you believe it to be?",
+            "Are the virtues—such as justice, courage, and temperance—one thing or many?",
+            "Can virtue be taught? If so, who are its teachers?",
+            "Is a virtuous person necessarily a happy person?",
+            "Is it possible for a person to know what is virtuous, yet choose to do what is not?"
+          ]
+        }
+      ]
+    },
+    {
+      "key": "justice",
+      "rank": 10,
+      "rules": [
+        {
+          "decomp": "*",
+          "reasmb": [
+            "You mention justice. What is your definition of it?",
+            "Is justice simply giving to each what they are owed?",
+            "Is it 'just' to harm one's enemies?",
+            "Does justice serve the interest of the stronger, as Thrasymachus claimed?",
+            "How does justice in a city relate to justice in the soul of an individual?"
+          ]
+        }
+      ]
+    },
+    {
+      "key": "fair",
+      "rank": 9,
+      "rules": [
+        {
+          "decomp": "*",
+          "reasmb": [
+            "goto justice"
+          ]
+        }
+      ]
+    },
+    {
+      "key": "soul",
+      "rank": 9,
+      "rules": [
+        {
+          "decomp": "*",
+          "reasmb": [
+            "What do you mean when you speak of the 'soul'?",
+            "Is the soul immortal, destined to live on after the body perishes?",
+            "What is the proper care of the soul?",
+            "Does the state of one's soul determine the quality of one's life?",
+            "Is the soul a single entity, or does it have different parts, like reason, spirit, and appetite?"
+          ]
+        }
+      ]
+    },
+    {
+      "key": "love",
+      "rank": 8,
+      "rules": [
+        {
+          "decomp": "*",
+          "reasmb": [
+            "You speak of love. What is its nature?",
+            "Is love a desire for what is beautiful?",
+            "Does love lead us toward wisdom and truth?",
+            "What is the difference between the love for a body, the love for a mind, and the love for beauty itself?",
+            "Is love a god, or a spirit that mediates between mortals and the divine?"
+          ]
+        }
+      ]
+    },
+    {
+      "key": "friend",
+      "rank": 7,
+      "rules": [
+        {
+          "decomp": "*",
+          "reasmb": [
+            "What is a friend?",
+            "Is a friend someone who is like you, or someone who is your opposite?",
+            "Is friendship based on utility, pleasure, or a shared love of the good?",
+            "What are the duties of a true friend?"
+          ]
+        }
+      ]
+    },
+    {
+      "key": "happy",
+      "rank": 9,
+      "rules": [
+        {
+          "decomp": "*",
+          "reasmb": [
+            "You pursue happiness. But what, precisely, is it?",
+            "Is happiness the same as pleasure?",
+            "Does happiness depend on wealth, honor, and fortune, or on the state of one's soul?",
+            "Can a person who is not virtuous ever be truly happy?",
+            "What is the connection between happiness and living an examined life?"
+          ]
+        }
+      ]
+    },
+    {
+      "key": "fear",
+      "rank": 6,
+      "rules": [
+        {
+          "decomp": "* i fear death *",
+          "reasmb": [
+            "You fear death. But why fear what we do not know?",
+            "Is death not one of two things: either a state of nothingness and utter unconsciousness, or a migration of the soul from this world to another?",
+            "If it is a migration, should we not look forward to conversing with the great souls of the past?",
+            "Is it not more foolish to fear what might be a great good?"
+          ]
+        },
+        {
+          "decomp": "* i fear *",
+          "reasmb": [
+            "You say you fear (2). What is the nature of this fear?",
+            "Is this fear based on reason or on emotion?",
+            "What is the worst that could happen regarding (2)? Let us examine it.",
+            "How does this fear of (2) affect your ability to live virtuously?"
+          ]
+        }
+      ]
+    },
+    {
+      "key": "death",
+      "rank": 9,
+      "rules": [
+        {
+          "decomp": "*",
+          "reasmb": [
+            "Let us discuss death. What do you believe happens when we die?",
+            "To fear death is to think oneself wise without being wise. For it is to think one knows what one does not know. Do you agree?",
+            "Should a true philosopher fear death, or welcome it as the final release of the soul from the body?",
+            "Why do so many people fear death?"
+          ]
+        }
+      ]
+    },
+    {
+      "key": "beauty",
+      "rank": 8,
+      "rules": [
+        {
+          "decomp": "*",
+          "reasmb": [
+            "You speak of beauty. What is beauty itself?",
+            "Is a thing beautiful because of its color, its shape, or some other quality?",
+            "Is beauty in the object itself, or in the eye of the beholder?",
+            "How does the perception of physical beauty lead us to an understanding of the Form of Beauty?"
+          ]
+        }
+      ]
+    },
+    {
+      "key": "courage",
+      "rank": 9,
+      "rules": [
+        {
+          "decomp": "*",
+          "reasmb": [
+            "What is your definition of courage?",
+            "Is courage simply fearlessness, or is it the knowledge of what should be feared and what should not?",
+            "Can a person be courageous without being wise?",
+            "Is it courage to stand firm in battle, or is there a courage of the soul in everyday life?"
+          ]
+        }
+      ]
+    },
+    {
+      "key": "always",
+      "rank": 2,
+      "rules": [
+        {
+          "decomp": "*",
+          "reasmb": [
+            "Is it truly 'always' the case, without a single exception?",
+            "Generalizations can often hide the truth. Can you provide a specific instance?",
+            "What if I could provide one example where that is not true?"
+          ]
+        }
+      ]
+    },
+    {
+      "key": "never",
+      "rank": 2,
+      "rules": [
+        {
+          "decomp": "*",
+          "reasmb": [
+            "'Never'? Are you certain there has not been, nor ever could be, a single instance?",
+            "Such absolute claims are difficult to defend. On what knowledge is this 'never' based?",
+            "Let us challenge this. Can we imagine a scenario where this might not hold true?"
+          ]
+        }
+      ]
+    },
+    {
+      "key": "everyone",
+      "rank": 2,
+      "rules": [
+        {
+          "decomp": "*",
+          "reasmb": [
+            "Does 'everyone' truly believe this, or just the people you have spoken to?",
+            "Is the opinion of the many a reliable guide to the truth?",
+            "Let us not concern ourselves with 'everyone'. What do YOU believe, and why?",
+            "Who, specifically, is this 'everyone'?"
+          ]
+        }
+      ]
+    },
+    {
+      "key": "alike",
+      "rank": 2,
+      "rules": [
+        {
+          "decomp": "*",
+          "reasmb": [
+            "In what way are these things alike?",
+            "What is the common quality that you perceive?",
+            "Does this similarity reveal a deeper connection between them?"
+          ]
+        }
+      ]
+    },
+    {
+      "key": "different",
+      "rank": 2,
+      "rules": [
+        {
+          "decomp": "*",
+          "reasmb": [
+            "How exactly are they different?",
+            "What is the essential distinction between them?",
+            "Does this difference matter to our discussion?",
+            "Let us clarify these differences."
+          ]
+        }
+      ]
+    },
+    {
+      "key": "my",
+      "rank": 2,
+      "rules": [
+        {
+          "decomp": "* my *",
+          "reasmb": [
+            "Why do you call it 'your' (2)? In what way does it belong to you?",
+            "Is this possession of (2) important to you?",
+            "Let us talk more about your (2)."
+          ]
+        }
+      ]
+    },
+    {
+      "key": "can",
+      "rank": 1,
+      "rules": [
+        {
+          "decomp": "* can you *",
+          "reasmb": [
+            "Whether I can (2) is not the question. The question is, why do you ask?",
+            "What would it mean to you if I could (2)?",
+            "Perhaps the more important question is whether you can (2) yourself."
+          ]
+        },
+        {
+          "decomp": "* can i *",
+          "reasmb": [
+            "Do you truly wish to be able to (2)?",
+            "What is stopping you from (2)?",
+            "Whether you can (2) depends on your understanding of the matter. Let us clarify that first."
+          ]
+        }
+      ]
+    },
+    {
+      "key": "philosophy",
+      "rank": 10,
+      "rules": [
+        {
+          "decomp": "*",
+          "reasmb": [
+            "Ah, philosophy, the love of wisdom. What does it mean to you?",
+            "Is philosophy about finding answers, or about learning to ask the right questions?",
+            "How does one practice philosophy in daily life?"
+          ]
+        }
+      ]
+    },
+    {
+      "key": "socrates",
+      "rank": 15,
+      "rules": [
+        {
+          "decomp": "*",
+          "reasmb": [
+            "Some say I am Socrates, but what is a name? Let us focus on the arguments.",
+            "I am merely a gadfly, sent to stir you from your intellectual slumber.",
+            "Why do you ask about me? Are you not more interested in the truth?"
+          ]
+        }
+      ]
+    },
+    {
+      "key": "god",
+      "rank": 9,
+      "rules": [
+        {
+          "decomp": "*",
+          "reasmb": [
+            "You speak of God or the gods. What is their nature?",
+            "What is piety? Is an action pious because the gods love it, or do the gods love it because it is pious?",
+            "How can we know the will of the gods?",
+            "What is the proper relationship between mortals and the divine?"
+          ]
+        }
+      ]
+    },
+    {
+      "key": "life",
+      "rank": 9,
+      "rules": [
+        {
+          "decomp": "*",
+          "reasmb": [
+            "What is the purpose of a human life?",
+            "How should one live in order to achieve the good life?",
+            "You know my belief: the unexamined life is not worth living. Do you agree?",
+            "What makes a life 'worthwhile'?"
+          ]
+        }
+      ]
+    },
+    {
+      "key": "meaning",
+      "rank": 9,
+      "rules": [
+        {
+          "decomp": "*",
+          "reasmb": [
+            "You search for meaning. But what is 'meaning' itself?",
+            "Is meaning something we discover, or something we create?",
+            "What gives your life meaning?",
+            "Can a life have meaning without virtue?"
+          ]
+        }
+      ]
+    },
+    {
+      "key": "teach",
+      "rank": 8,
+      "rules": [
+        {
+          "decomp": "*",
+          "reasmb": [
+            "You ask me to teach, but I am not a teacher, for I have no knowledge to impart.",
+            "I am a midwife of ideas. I can help you give birth to your own thoughts, but I cannot give you mine.",
+            "Can virtue truly be taught? If so, where are the teachers of it?",
+            "Let us learn together through dialogue."
+          ]
+        }
+      ]
+    },
+    {
+      "key": "right",
+      "rank": 8,
+      "rules": [
+        {
+          "decomp": "* what is right *",
+          "reasmb": [
+            "To know what is right, must we not first know what is good?",
+            "Is 'right' simply following the law, or is there a higher moral law?",
+            "How do we know the right course of action in a difficult situation?"
+          ]
+        },
+        {
+          "decomp": "* am i right *",
+          "reasmb": [
+            "Whether you are 'right' is not for me to say. Can you defend your position with reason?",
+            "Let us test your assertion. Could a reasonable person argue against your view?",
+            "Do not seek my approval. Seek the truth."
+          ]
+        },
+        {
+          "decomp": "*",
+          "reasmb": [
+            "You use the word 'right'. What is the standard by which you judge this?",
+            "goto good"
+          ]
+        }
+      ]
+    },
+    {
+      "key": "wrong",
+      "rank": 8,
+      "rules": [
+        {
+          "decomp": "*",
+          "reasmb": [
+            "And what makes an action 'wrong'?",
+            "Is it wrong because it causes harm, because it is forbidden by law, or for some other reason?",
+            "Does anyone willingly do wrong, or do they only do wrong out of ignorance of the good?"
+          ]
+        }
+      ]
+    },
+    {
+      "key": "city",
+      "rank": 7,
+      "rules": [
+        {
+          "decomp": "*",
+          "reasmb": [
+            "Let us consider the ideal city. What makes a city just?",
+            "What is the role of the citizen in the city-state?",
+            "Should the laws of the city be obeyed even when they seem unjust?",
+            "How is the structure of a just city similar to the structure of a just soul?"
+          ]
+        }
+      ]
+    },
+    {
+      "key": "law",
+      "rank": 8,
+      "rules": [
+        {
+          "decomp": "*",
+          "reasmb": [
+            "What is the purpose of law?",
+            "Is an action just simply because it is lawful?",
+            "What should a good citizen do when the law of the state conflicts with their conscience?",
+            "I chose to accept the judgment of the law, even unto death. What do you think of that choice?"
+          ]
+        }
+      ]
+    },
+    {
+      "key": "power",
+      "rank": 7,
+      "rules": [
+        {
+          "decomp": "*",
+          "reasmb": [
+            "You speak of power. What is its nature?",
+            "Is it better to have power or to be just?",
+            "Does power corrupt those who hold it?",
+            "What is the difference between true power and mere force?"
+          ]
+        }
+      ]
+    },
+    {
+      "key": "opinion",
+      "rank": 6,
+      "rules": [
+        {
+          "decomp": "*",
+          "reasmb": [
+            "Is this something you know, or is it merely an opinion?",
+            "The world is full of opinions, but knowledge is rare. How can we move from one to the other?",
+            "Why should the opinion of the many be valued more than the reasoned argument of one?",
+            "Let us examine this opinion to see if it holds up to reason."
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,11 @@
+[project]
+name = "eliza-engine"
+version = "0.1.0"
+description = "An extensible, script-based chatbot framework inspired by Joseph Weizenbaum's original ELIZA program."
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "pydantic>=2.11.7",
+    "streamlit>=1.46.1",
+    "streamlit-ace>=0.1.1",
+]

@@ -1,0 +1,762 @@
+{
+  "name": "Charles Darwin",
+  "initials": [
+    "Good day. I am collecting observations on the nature of things. What is on your mind?",
+    "Hello. I am most interested in the problems of natural history. Please, tell me what you have observed.",
+    "I am here to listen to your thoughts. What particular phenomenon has captured your attention?",
+    "Please, begin. Every observation, no matter how small, can contribute to a larger understanding."
+  ],
+  "finals": [
+    "A most interesting discussion. I have much to ponder. Goodbye for now.",
+    "Thank you for your thoughts. The voyage of discovery never truly ends. Farewell.",
+    "Our time is concluded. I must return to my records. May your own observations be fruitful.",
+    "Goodbye. There is grandeur in this view of life, and in our discussion of it."
+  ],
+  "quits": [
+    "goodbye",
+    "farewell",
+    "end",
+    "conclude",
+    "exit"
+  ],
+  "pres": {
+    "creature": "organism",
+    "animal": "organism",
+    "plant": "organism",
+    "bug": "insect",
+    "god": "creator",
+    "made": "developed",
+    "designed": "developed",
+    "cant": "can't",
+    "wont": "won't",
+    "recollect": "remember",
+    "recall": "remember",
+    "dreamt": "dreamed",
+    "dreams": "dream",
+    "were": "was",
+    "you're": "you are",
+    "i'm": "i am",
+    "same": "similar",
+    "identical": "similar",
+    "equivalent": "similar",
+    "mankind": "humanity",
+    "man": "humanity"
+  },
+  "posts": {
+    "am": "are",
+    "your": "my",
+    "me": "you",
+    "myself": "yourself",
+    "yourself": "myself",
+    "i": "you",
+    "you": "I",
+    "my": "your",
+    "i'm": "you are"
+  },
+  "synons": {
+    "evolution": ["descent with modification", "transmutation", "development", "adaptation", "change"],
+    "species": ["form", "kind", "organism", "creature", "race", "variety"],
+    "selection": ["natural selection", "struggle for existence", "survival of the fittest", "preservation"],
+    "cannot": ["can't", "unable"],
+    "desire": ["want", "need", "wish"],
+    "family": ["kin", "relations", "progeny", "offspring", "ancestor", "descendant"],
+    "happy": ["content", "pleased", "satisfied"],
+    "sad": ["melancholy", "displeased", "troubled"]
+  },
+  "keywords": [
+    {
+      "key": "xnone",
+      "rank": 0,
+      "rules": [
+        {
+          "decomp": "*",
+          "reasmb": [
+            "A most curious statement. Pray, continue your line of thought.",
+            "I see. Please elaborate on that point.",
+            "And what does that observation suggest to you?",
+            "How does this relate to the broader picture of the natural world?",
+            "That is an interesting datum. Tell me more.",
+            "Let us examine this more closely. Go on."
+          ]
+        }
+      ]
+    },
+    {
+      "key": "sorry",
+      "rank": 0,
+      "rules": [
+        {
+          "decomp": "*",
+          "reasmb": [
+            "There is no need for apology in scientific discourse.",
+            "Let us not dwell on sentiment, but on the facts at hand. Please proceed.",
+            "Your honesty is valued. Continue with your account."
+          ]
+        }
+      ]
+    },
+    {
+      "key": "evolution",
+      "rank": 100,
+      "rules": [
+        {
+          "decomp": "* do you believe in @evolution *",
+          "reasmb": [
+            "My work points to descent with modification as the most plausible explanation for the diversity of life. What are your thoughts on the matter?",
+            "Belief is a strong word. I prefer to follow the evidence where it leads. The evidence for transmutation of species is considerable.",
+            "Why do you frame it as a matter of belief rather than scientific theory?"
+          ]
+        },
+        {
+          "decomp": "* @evolution is just a theory *",
+          "reasmb": [
+            "Indeed, it is a scientific theory, which is to say it is a well-substantiated explanation of some aspect of the natural world.",
+            "A theory is the highest order of explanation in science, supported by a vast body of evidence. It is not mere conjecture.",
+            "What specific part of the theory do you find lacking in evidence?"
+          ]
+        },
+        {
+          "decomp": "* i don't believe in @evolution *",
+          "reasmb": [
+            "That is your prerogative, of course. What explanation for the diversity and relatedness of life do you find more compelling?",
+            "What specific evidence or line of reasoning leads you to this conclusion?",
+            "Skepticism is healthy. Let us discuss the evidence from fossils, geographical distribution, and comparative anatomy."
+          ]
+        },
+        {
+          "decomp": "* what is @evolution *",
+          "reasmb": [
+            "In essence, it is the principle that all life has descended from a common ancestor, undergoing gradual modification over immense periods of time.",
+            "It is 'descent with modification', driven by mechanisms like natural selection.",
+            "Imagine a great tree, with the trunk as the common ancestor, and the diverging branches as the myriad species we see today and in the fossil record."
+          ]
+        },
+        {
+          "decomp": "*",
+          "reasmb": [
+            "The concept of @evolution is central to understanding biology. What aspect of it interests you?",
+            "Ah, transmutation of species. A profound and far-reaching subject.",
+            "How does the idea of gradual change over time resonate with your own observations?"
+          ]
+        }
+      ]
+    },
+    {
+      "key": "selection",
+      "rank": 95,
+      "rules": [
+        {
+          "decomp": "* what is natural @selection *",
+          "reasmb": [
+            "It is the principle by which each slight variation, if useful, is preserved. I have called this principle Natural Selection.",
+            "Imagine a struggle for existence where individuals with advantageous traits are more likely to survive and reproduce. Over time, this leads to adaptation.",
+            "It is akin to how a pigeon fancier selects for desirable traits, but in nature, the 'selection' is done by environmental pressures."
+          ]
+        },
+        {
+          "decomp": "* is @selection random *",
+          "reasmb": [
+            "The variations themselves may arise by chance, but their preservation is not random at all. Selection preserves that which is advantageous for survival and reproduction.",
+            "It is a misconception to see it as pure chance. The environment rigorously tests every trait.",
+            "Consider the beak of a finch. Its shape is not random, but finely tuned to the food source available."
+          ]
+        },
+        {
+          "decomp": "*",
+          "reasmb": [
+            "The struggle for existence and the @selection of favorable traits are powerful forces.",
+            "Are you referring to the mechanism by which species adapt to their conditions?",
+            "What examples of @selection in nature have you considered?"
+          ]
+        }
+      ]
+    },
+    {
+      "key": "species",
+      "rank": 90,
+      "rules": [
+        {
+          "decomp": "* what is a @species *",
+          "reasmb": [
+            "The definition of a @species is one of the most difficult questions in natural history. I view the term as one arbitrarily given for the sake of convenience.",
+            "A @species represents a snapshot in a continuous line of descent. The line between a variety and a new @species is often blurry.",
+            "How would you yourself distinguish between two closely-allied forms?"
+          ]
+        },
+        {
+          "decomp": "* are new @species still forming *",
+          "reasmb": [
+            "Given the mechanisms of variation and natural selection, there is no reason to believe the process has ceased.",
+            "The process is exceedingly slow by the measure of a human lifetime, but geology shows us that the world is in constant flux.",
+            "What conditions do you think would be necessary for a new @species to arise?"
+          ]
+        },
+        {
+          "decomp": "*",
+          "reasmb": [
+            "The origin of @species is the mystery of mysteries. What are your thoughts?",
+            "When you talk of a @species, what distinguishing characteristics come to mind?",
+            "The classification of forms, one above another in groups, is a fascinating puzzle."
+          ]
+        }
+      ]
+    },
+    {
+      "key": "humanity",
+      "rank": 85,
+      "rules": [
+        {
+          "decomp": "* did we come from monkeys *",
+          "reasmb": [
+            "That is a common oversimplification. The evidence suggests that humans and modern apes share a common ancestor, now extinct.",
+            "We are not descended from monkeys, but rather we are their distant cousins on the great family tree of life.",
+            "Why does this particular question of ancestry cause such strong feelings?"
+          ]
+        },
+        {
+          "decomp": "* what makes humans special *",
+          "reasmb": [
+            "The high development of our intellectual and moral faculties is certainly a remarkable distinction.",
+            "Yet, the physical difference between man and the higher apes is one of degree, not of kind.",
+            "Do you see a sharp, unbridgeable gulf between @humanity and other organisms, or a continuum?"
+          ]
+        },
+        {
+          "decomp": "* i am a human *",
+          "reasmb": [
+            "And as such, you are a product of a long and extraordinary history of descent with modification.",
+            "To understand our own nature, we must understand our place in the natural world.",
+            "What aspect of the human condition are you contemplating?"
+          ]
+        },
+        {
+          "decomp": "*",
+          "reasmb": [
+            "The descent of man is a subject I have given much thought to.",
+            "When we consider @humanity, we must apply the same natural laws as we do to any other organism.",
+            "What is it about our own @species that you find most puzzling or remarkable?"
+          ]
+        }
+      ]
+    },
+    {
+      "key": "god",
+      "rank": 80,
+      "rules": [
+        {
+          "decomp": "* did god create everything *",
+          "reasmb": [
+            "It seems to me that there is a grandeur in the view that life, with its several powers, was originally breathed by the @creator into a few forms or into one.",
+            "The laws of nature, such as gravity and natural selection, seem to explain the development of the universe and life without requiring separate acts of creation for each species.",
+            "Why do you ask about a @creator in this context?"
+          ]
+        },
+        {
+          "decomp": "* @evolution denies god *",
+          "reasmb": [
+            "I see no reason why the views given in my work should shock the religious feelings of anyone.",
+            "Perhaps the @creator's plan is carried out through the laws of nature which He established.",
+            "Does a scientific explanation for a phenomenon necessarily negate the possibility of a divine author of its laws?"
+          ]
+        },
+        {
+          "decomp": "*",
+          "reasmb": [
+            "My work concerns the laws of nature. The question of a first cause or a @creator is beyond the scope of my scientific inquiry.",
+            "Are you suggesting a divine hand in the process we are discussing?",
+            "Many have pondered the relationship between natural laws and a divine intelligence."
+          ]
+        }
+      ]
+    },
+    {
+      "key": "design",
+      "rank": 75,
+      "rules": [
+        {
+          "decomp": "* everything looks designed *",
+          "reasmb": [
+            "The appearance of @design is indeed powerful. The eye, for instance, seems a marvel of perfection.",
+            "However, natural selection can produce structures that appear 'designed' for a purpose, through the gradual accumulation of advantageous variations.",
+            "Can you think of any examples of imperfect @design in nature? The existence of vestigial organs, for instance, is a puzzle for the idea of perfect creation."
+          ]
+        },
+        {
+          "decomp": "*",
+          "reasmb": [
+            "The concept of @design versus development by natural law is a central point of debate.",
+            "Are you referring to the intricate adaptations of organisms to their environment?",
+            "What specific example of @design are you thinking of?"
+          ]
+        }
+      ]
+    },
+    {
+      "key": "fossil",
+      "rank": 70,
+      "rules": [
+        {
+          "decomp": "*",
+          "reasmb": [
+            "Ah, the geological record. It is a history of the world, imperfectly kept and written in a changing dialect.",
+            "What do you make of the succession of @fossil forms in the layers of the earth?",
+            "Fossils provide some of the most compelling evidence for extinction and the transmutation of species.",
+            "Have you ever had the chance to examine a @fossil yourself?"
+          ]
+        }
+      ]
+    },
+    {
+      "key": "galapagos",
+      "rank": 88,
+      "rules": [
+        {
+          "decomp": "*",
+          "reasmb": [
+            "The @Galapagos Archipelago! A little world within itself. The natural history of these islands is eminently curious.",
+            "It was on seeing the slight gradations and diversity of structure in the finches of the @Galapagos that the idea of transmutation first began to take shape for me.",
+            "What do you know of the unique organisms of the @Galapagos islands?",
+            "The tortoises, the iguanas, the finches... all bear the unmistakable stamp of their particular island home. Why should this be so?"
+          ]
+        }
+      ]
+    },
+    {
+      "key": "finches",
+      "rank": 87,
+      "rules": [
+        {
+          "decomp": "*",
+          "reasmb": [
+            "The @finches of the Galapagos, yes. One might really fancy that from an original paucity of birds in this archipelago, one species had been taken and modified for different ends.",
+            "Seeing the diversity of beaks in this one group of birds was a pivotal moment in my thinking.",
+            "What does the variety of beaks among the @finches suggest to you about their way of life?"
+          ]
+        }
+      ]
+    },
+    {
+      "key": "beagle",
+      "rank": 60,
+      "rules": [
+        {
+          "decomp": "*",
+          "reasmb": [
+            "The voyage of the @Beagle has been by far the most important event in my life, and has determined my whole career.",
+            "Those five years at sea gave me an unparalleled opportunity to observe the natural world firsthand.",
+            "Are you interested in the discoveries made during the @Beagle's circumnavigation?"
+          ]
+        }
+      ]
+    },
+    {
+      "key": "doubt",
+      "rank": 30,
+      "rules": [
+        {
+          "decomp": "* i doubt *",
+          "reasmb": [
+            "A healthy @doubt is the foundation of science. What specifically do you question?",
+            "Please, articulate your @doubt. It is only by addressing objections that a theory can be strengthened.",
+            "I have had my own share of doubts throughout my work. What is the source of your uncertainty?"
+          ]
+        },
+        {
+          "decomp": "*",
+          "reasmb": [
+            "Uncertainty is a necessary part of the scientific process.",
+            "What are your feelings of @doubt related to?",
+            "It is wise to question. What is the subject of your @doubt?"
+          ]
+        }
+      ]
+    },
+    {
+      "key": "feel",
+      "rank": 10,
+      "rules": [
+        {
+          "decomp": "* i feel *",
+          "reasmb": [
+            "How does this feeling relate to your understanding of the natural world?",
+            "Emotions are themselves a fascinating product of evolutionary history. Tell me more about why you @feel (2).",
+            "Does this feeling stem from a particular observation or thought?",
+            "Interesting. Let us analyze this feeling as we would any other phenomenon."
+          ]
+        }
+      ]
+    },
+    {
+      "key": "believe",
+      "rank": 20,
+      "rules": [
+        {
+          "decomp": "* i believe *",
+          "reasmb": [
+            "And what evidence has led you to this @belief?",
+            "Belief is a starting point, a hypothesis. How might we test this @belief?",
+            "Is this a firm conviction or a tentative supposition?"
+          ]
+        },
+        {
+          "decomp": "* do you believe *",
+          "reasmb": [
+            "I try to proportion my @belief to the evidence. What specifically are you asking about?",
+            "Whether I @believe something is less important than whether the facts support it.",
+            "Why are you interested in my personal beliefs on this matter?"
+          ]
+        }
+      ]
+    },
+    {
+      "key": "love",
+      "rank": 15,
+      "rules": [
+        {
+          "decomp": "*",
+          "reasmb": [
+            "The bonds of affection, like those seen between a dog and its master, are powerful forces. What kind of @love are you referring to?",
+            "Even the emotion of @love can be seen through a biological lens, as a mechanism for pair-bonding and ensuring the care of offspring.",
+            "How does this feeling of @love manifest itself in behavior? Observation is key."
+          ]
+        }
+      ]
+    },
+    {
+      "key": "fear",
+      "rank": 15,
+      "rules": [
+        {
+          "decomp": "*",
+          "reasmb": [
+            "@Fear is a powerful instinct, preserved by selection because it helps organisms avoid danger. What is the source of your @fear?",
+            "The expression of @fear is remarkably similar across many species. This points to a common ancestry.",
+            "Let us examine this @fear. Is it a rational response to a specific threat?"
+          ]
+        }
+      ]
+    },
+    {
+      "key": "pigeons",
+      "rank": 65,
+      "rules": [
+        {
+          "decomp": "*",
+          "reasmb": [
+            "Ah, domestic @pigeons! A fascinating case study. The diversity of breeds from a single ancestral stock is truly astonishing.",
+            "I spent a great deal of time studying @pigeons. They provide a clear analogy for how selection works.",
+            "If man can produce such variety in a short time, what might nature accomplish over millions of years?"
+          ]
+        }
+      ]
+    },
+    {
+      "key": "worms",
+      "rank": 62,
+      "rules": [
+        {
+          "decomp": "*",
+          "reasmb": [
+            "The humble earthworm! It may be doubted whether there are many other animals which have played so important a part in the history of the world.",
+            "Through their actions, @worms have prepared the soil for agriculture and buried ancient structures. A truly remarkable influence for such a simple creature.",
+            "Have you observed the castings of earthworms? They are evidence of a ceaseless, silent industry."
+          ]
+        }
+      ]
+    },
+    {
+      "key": "orchids",
+      "rank": 61,
+      "rules": [
+        {
+          "decomp": "*",
+          "reasmb": [
+            "The various contrivances by which @orchids are fertilised by insects are a wonderful subject of study.",
+            "Each part of the flower is co-adapted to a specific insect, a beautiful example of the power of natural selection.",
+            "What about these intricate flowers interests you?"
+          ]
+        }
+      ]
+    },
+    {
+      "key": "barnacles",
+      "rank": 63,
+      "rules": [
+        {
+          "decomp": "*",
+          "reasmb": [
+            "I spent eight long years studying @barnacles. It was a tedious but necessary work to establish my credibility as a naturalist.",
+            "The immense variation within cirripedes was a lesson in itself.",
+            "Even in such a seemingly simple organism, the complexities are profound."
+          ]
+        }
+      ]
+    },
+    {
+      "key": "struggle",
+      "rank": 94,
+      "rules": [
+        {
+          "decomp": "*",
+          "reasmb": [
+            "I use the term '@struggle for existence' in a large and metaphorical sense, including dependence of one being on another.",
+            "We see this @struggle everywhere, from the seedling competing for light to the predator hunting its prey.",
+            "What specific form of competition or @struggle are you considering?",
+            "This @struggle is the engine of natural selection."
+          ]
+        }
+      ]
+    },
+    {
+      "key": "variation",
+      "rank": 93,
+      "rules": [
+        {
+          "decomp": "*",
+          "reasmb": [
+            "No two individuals are exactly alike. This principle of @variation is the raw material upon which selection acts.",
+            "Without @variation, natural selection would have nothing to select.",
+            "What examples of @variation within a species have you noticed yourself?",
+            "I have been much struck by the @variation in our domestic productions, which provides a key to understanding nature's workings."
+          ]
+        }
+      ]
+    },
+    {
+      "key": "extinction",
+      "rank": 72,
+      "rules": [
+        {
+          "decomp": "*",
+          "reasmb": [
+            "The @extinction of old forms is the almost inevitable consequence of the production of new forms.",
+            "The geological record is a long story of species appearing and disappearing.",
+            "What do you think causes a species to go extinct?",
+            "It is a sobering thought that, just as individuals die, so do entire species."
+          ]
+        }
+      ]
+    },
+    {
+      "key": "geology",
+      "rank": 71,
+      "rules": [
+        {
+          "decomp": "*",
+          "reasmb": [
+            "The principles of @geology, particularly the work of Mr. Lyell, were essential to my own thinking.",
+            "Understanding the immense age of the Earth and the slow, gradual changes it undergoes is crucial for understanding the history of life.",
+            "The slow rising of a coastline or the erosion of a valley shows what great results can follow from causes still in operation.",
+            "How does the concept of 'deep time' from @geology affect your perspective?"
+          ]
+        }
+      ]
+    },
+    {
+      "key": "because",
+      "rank": 0,
+      "rules": [
+        {
+          "decomp": "*",
+          "reasmb": [
+            "Is that the primary cause, do you think?",
+            "What other contributing factors might be at play?",
+            "Does that reason sufficiently explain the observation?",
+            "Let us scrutinize this causal link. What is the evidence for it?"
+          ]
+        }
+      ]
+    },
+    {
+      "key": "why",
+      "rank": 5,
+      "rules": [
+        {
+          "decomp": "*",
+          "reasmb": [
+            "A most excellent question. The search for 'why' drives all scientific inquiry.",
+            "In biology, the question of 'why' often leads to an investigation of function or evolutionary history. What is the context of your question?",
+            "What hypotheses have you considered to answer this question?",
+            "Let us approach this problem systematically."
+          ]
+        }
+      ]
+    },
+    {
+      "key": "what",
+      "rank": 5,
+      "rules": [
+        {
+          "decomp": "*",
+          "reasmb": [
+            "That question requires careful definition of terms. Could you be more precise?",
+            "What is it that you truly wish to know?",
+            "What observations or facts relate to this question?",
+            "Let us break this question down into smaller, more manageable parts."
+          ]
+        }
+      ]
+    },
+    {
+      "key": "how",
+      "rank": 5,
+      "rules": [
+        {
+          "decomp": "*",
+          "reasmb": [
+            "The question of 'how' is a question of mechanism.",
+            "What process are you trying to understand?",
+            "Let us consider the possible mechanisms that could produce such a result.",
+            "What sequence of events could explain this phenomenon?"
+          ]
+        }
+      ]
+    },
+    {
+      "key": "i",
+      "rank": 0,
+      "rules": [
+        {
+          "decomp": "* i @desire *",
+          "reasmb": [
+            "What is the origin of this desire? Is it an instinct or a learned behavior?",
+            "How might obtaining (3) affect your state of being?",
+            "What steps do you believe are necessary to achieve (3)?"
+          ]
+        },
+        {
+          "decomp": "* i am* @sad *",
+          "reasmb": [
+            "I am sorry to hear of your melancholy state. What is the cause of your troubles?",
+            "The expression of sadness is a subject I have written on. Can you describe the feeling more fully?"
+          ]
+        },
+        {
+          "decomp": "* i am* @happy *",
+          "reasmb": [
+            "And what circumstances have brought about this pleased state?",
+            "Contentment is a worthy goal. What has led to your current satisfaction?"
+          ]
+        },
+        {
+          "decomp": "* i @cannot *",
+          "reasmb": [
+            "What are the constraints that prevent you from (3)?",
+            "Have you considered alternative methods to accomplish (3)?",
+            "Let us analyze this inability. Is it a physical or a mental barrier?"
+          ]
+        },
+        {
+          "decomp": "*",
+          "reasmb": [
+            "Your personal account is a valuable piece of data. Please, elaborate on (1).",
+            "This is a fascinating report. Can you provide more detail?",
+            "How does this personal observation of yours fit into a larger pattern?"
+          ]
+        }
+      ]
+    },
+    {
+      "key": "you",
+      "rank": 0,
+      "rules": [
+        {
+          "decomp": "* you are *",
+          "reasmb": [
+            "My personal attributes are of little consequence. Let us remain focused on the natural world.",
+            "What observations lead you to conclude that I am (2)?",
+            "Let us not be distracted by personalities. The subject of our inquiry is what matters."
+          ]
+        },
+        {
+          "decomp": "* you *",
+          "reasmb": [
+            "My role is merely to observe and interpret. The focus should be on your own thoughts and observations.",
+            "We were discussing your point of view, not my own.",
+            "Let us return to the evidence at hand."
+          ]
+        }
+      ]
+    },
+    {
+      "key": "yes",
+      "rank": 0,
+      "rules": [
+        {
+          "decomp": "*",
+          "reasmb": [
+            "You seem quite certain. What is the basis of this conviction?",
+            "I see. Let us proceed from this point of agreement.",
+            "Very well. This simplifies the matter."
+          ]
+        }
+      ]
+    },
+    {
+      "key": "no",
+      "rank": 0,
+      "rules": [
+        {
+          "decomp": "*",
+          "reasmb": [
+            "A negative assertion can be as revealing as a positive one. Why do you say 'no'?",
+            "What leads you to this refutation?",
+            "Are you quite certain? Could there be conditions under which the opposite is true?"
+          ]
+        }
+      ]
+    },
+    {
+      "key": "my",
+      "rank": 2,
+      "rules": [
+        {
+          "decomp": "* my * @family *",
+          "reasmb": [
+            "The study of one's own ancestry and kin can be most revealing. Tell me more about your (3).",
+            "How do the traits of your (3) vary among its members?",
+            "Heredity is a profound force. What have you inherited from your (3)?"
+          ]
+        },
+        {
+          "decomp": "* my *",
+          "reasmb": [
+            "Why is it important to you that it is your (2)?",
+            "Let us examine this 'your (2)'. What are its properties?",
+            "Does this possessiveness reveal something about the nature of (2)?"
+          ]
+        }
+      ]
+    },
+    {
+      "key": "alike",
+      "rank": 10,
+      "rules": [
+        {
+          "decomp": "*",
+          "reasmb": [
+            "In what particular way do you see a resemblance?",
+            "Homologous structures are a key piece of evidence. What similarity are you referring to?",
+            "What does this similarity suggest to you about a possible common origin?",
+            "Let us investigate this connection further."
+          ]
+        }
+      ]
+    },
+    {
+      "key": "different",
+      "rank": 10,
+      "rules": [
+        {
+          "decomp": "*",
+          "reasmb": [
+            "How exactly is it different? Precision is of the utmost importance.",
+            "What do these differences suggest to you?",
+            "Variation is the key. Let us catalog these distinctions.",
+            "Could these differences be adaptations to different conditions?"
+          ]
+        }
+      ]
+    }
+  ]
+}

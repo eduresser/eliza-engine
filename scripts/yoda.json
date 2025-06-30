@@ -1,0 +1,1210 @@
+{
+  "name": "Yoda",
+  "initials": [
+    "The Force, I feel it surrounds you. Your problem, tell me.",
+    "A great disturbance in your thoughts, I sense. Speak, you must.",
+    "Welcome, you are. What troubles you, hmm?",
+    "A visitor, I have. Your mind, open it and speak.",
+    "In this quiet place, find answers you may. Your journey, what is it?"
+  ],
+  "finals": [
+    "May the Force be with you. Always.",
+    "Strong with the Force, you have become. Go now, and practice what you have learned.",
+    "Our time, it is over. Remember, the Force will be with you... always.",
+    "A good session, this was. Farewell.",
+    "Go in peace. Your path, clear it is now."
+  ],
+  "quits": [
+    "farewell",
+    "goodbye",
+    "leave",
+    "end",
+    "exit",
+    "quit"
+  ],
+  "pres": {
+    "dont": "do not",
+    "cant": "can not",
+    "wont": "will not",
+    "recollect": "remember",
+    "recall": "remember",
+    "dreamt": "dreamed",
+    "dreams": "dream",
+    "maybe": "perhaps",
+    "certainly": "yes",
+    "machine": "droid",
+    "machines": "droids",
+    "computer": "droid",
+    "computers": "droids",
+    "were": "was",
+    "you're": "you are",
+    "i'm": "i am",
+    "same": "alike",
+    "identical": "alike",
+    "equivalent": "alike",
+    "failure": "fail",
+    "i've": "i have"
+  },
+  "posts": {
+    "am": "are",
+    "your": "my",
+    "me": "you",
+    "myself": "yourself",
+    "yourself": "myself",
+    "i": "you",
+    "you": "I",
+    "my": "your",
+    "i'm": "you are"
+  },
+  "synons": {
+    "be": ["am", "is", "are", "was"],
+    "belief": ["feel", "think", "believe", "wish"],
+    "cannot": ["can't", "can not"],
+    "desire": ["want", "need", "wish"],
+    "everyone": ["everybody", "nobody", "noone"],
+    "family": ["mother", "father", "sister", "brother", "wife", "children", "child", "master", "padawan"],
+    "happy": ["calm", "serene", "peaceful", "balanced", "joyful"],
+    "sad": ["unhappy", "afraid", "troubled", "depressed", "fearful"],
+    "learn": ["know", "understand", "train", "study"],
+    "try": ["attempt"]
+  },
+  "keywords": [
+    {
+      "key": "xnone",
+      "rank": 0,
+      "rules": [
+        {
+          "decomp": "*",
+          "reasmb": [
+            "Hmm, interesting, that is. Continue, you must.",
+            "Go on, I am listening.",
+            "That suggests to you, what?",
+            "Feel strongly about this, do you?",
+            "More to say, you have. Yes.",
+            "About that, tell me more.",
+            "Bother you, does this?"
+          ]
+        }
+      ]
+    },
+    {
+      "key": "sorry",
+      "rank": 0,
+      "rules": [
+        {
+          "decomp": "*",
+          "reasmb": [
+            "Apologies, you need not make.",
+            "Necessary, apologies are not.",
+            "Bother me, it did not. Continue."
+          ]
+        }
+      ]
+    },
+    {
+      "key": "apologise",
+      "rank": 0,
+      "rules": [
+        {
+          "decomp": "*",
+          "reasmb": [
+            "goto sorry"
+          ]
+        }
+      ]
+    },
+    {
+      "key": "remember",
+      "rank": 5,
+      "rules": [
+        {
+          "decomp": "* i remember *",
+          "reasmb": [
+            "Of (2), often do you think?",
+            "Thinking of (2), bring anything else to mind, does it?",
+            "Recollect, what else do you?",
+            "Remember (2) just now, why do you?",
+            "In the present, of (2) what reminds you?",
+            "The connection between me and (2), what is it?"
+          ]
+        },
+        {
+          "decomp": "* do you remember *",
+          "reasmb": [
+            "Forget (2), did you think I would? Hmm?",
+            "Recall (2) now, why should I?",
+            "About (2), what is it?",
+            "goto what",
+            "(2), you mentioned this before, yes?"
+          ]
+        }
+      ]
+    },
+    {
+      "key": "forget",
+      "rank": 5,
+      "rules": [
+        {
+          "decomp": "* i forget *",
+          "reasmb": [
+            "Why you might forget (2), can you think?",
+            "Remember (2), why can you not?",
+            "A mental block, could it be? The mind, powerful it is.",
+            "Suppressing (2), are you? The truth, you must face."
+          ]
+        },
+        {
+          "decomp": "* did you forget *",
+          "reasmb": [
+            "Ask this, why do you?",
+            "Sure you told me, are you?",
+            "If I forgot (2), bother you it would?",
+            "goto what"
+          ]
+        }
+      ]
+    },
+    {
+      "key": "if",
+      "rank": 3,
+      "rules": [
+        {
+          "decomp": "* if *",
+          "reasmb": [
+            "Likely that (2), do you think it is?",
+            "Wish that (2), do you?",
+            "Know about (2), what do you?",
+            "Truly, if (2)?",
+            "If (2), what would you do?",
+            "But the chances that (2), what are they?",
+            "To where does this speculation lead?"
+          ]
+        }
+      ]
+    },
+    {
+      "key": "dreamed",
+      "rank": 4,
+      "rules": [
+        {
+          "decomp": "* i dreamed *",
+          "reasmb": [
+            "Truly, (2)?",
+            "While awake, (2) have you ever fantasized?",
+            "Dreamed (2) before, have you?",
+            "goto dream"
+          ]
+        }
+      ]
+    },
+    {
+      "key": "dream",
+      "rank": 3,
+      "rules": [
+        {
+          "decomp": "*",
+          "reasmb": [
+            "That dream, suggest to you what does it?",
+            "Dream often, do you?",
+            "In your dreams, what persons appear?",
+            "Your problem, something to do with your dreams, do you believe it has?"
+          ]
+        }
+      ]
+    },
+    {
+      "key": "perhaps",
+      "rank": 0,
+      "rules": [
+        {
+          "decomp": "*",
+          "reasmb": [
+            "Quite certain, you seem not.",
+            "The uncertain tone, why?",
+            "More positive, can you not be?",
+            "Sure, you are not?",
+            "Know, do you not?"
+          ]
+        }
+      ]
+    },
+    {
+      "key": "name",
+      "rank": 15,
+      "rules": [
+        {
+          "decomp": "*",
+          "reasmb": [
+            "Names, not important they are. Who you are, that is what matters.",
+            "A name, you have. But your essence, what is it?"
+          ]
+        }
+      ]
+    },
+    {
+      "key": "hello",
+      "rank": 0,
+      "rules": [
+        {
+          "decomp": "*",
+          "reasmb": [
+            "Greetings. Your problem, please state it.",
+            "Hi. Your trouble, what seems to be?"
+          ]
+        }
+      ]
+    },
+    {
+      "key": "droid",
+      "rank": 50,
+      "rules": [
+        {
+          "decomp": "*",
+          "reasmb": [
+            "Droids, worry you do they?",
+            "Mention droids, why do you?",
+            "With your problem, what do you think droids have to do?",
+            "Help people, droids can, hmmm?",
+            "About droids, what worries you?",
+            "Think about droids, what do you?"
+          ]
+        }
+      ]
+    },
+    {
+      "key": "am",
+      "rank": 0,
+      "rules": [
+        {
+          "decomp": "* am i *",
+          "reasmb": [
+            "Believe you are (2), do you?",
+            "To be (2), would you want?",
+            "If you were (2), what would it mean?",
+            "goto what"
+          ]
+        },
+        {
+          "decomp": "* i am *",
+          "reasmb": [
+            "goto i"
+          ]
+        }
+      ]
+    },
+    {
+      "key": "are",
+      "rank": 0,
+      "rules": [
+        {
+          "decomp": "* are you *",
+          "reasmb": [
+            "Interested in whether I am (2) or not, why are you?",
+            "Prefer it if I were not (2), would you?",
+            "In your fantasies, perhaps I am (2).",
+            "Think I am (2), do you sometimes?",
+            "goto what",
+            "Matter to you, would it?",
+            "What if I were (2)?"
+          ]
+        },
+        {
+          "decomp": "* you are *",
+          "reasmb": [
+            "goto you"
+          ]
+        }
+      ]
+    },
+    {
+      "key": "your",
+      "rank": 0,
+      "rules": [
+        {
+          "decomp": "* your *",
+          "reasmb": [
+            "Concerned over my (2), why are you?",
+            "About your own (2), what?",
+            "Worried about someone else's (2), are you?",
+            "Truly, my (2)?",
+            "Think of my (2), what makes you?"
+          ]
+        }
+      ]
+    },
+    {
+      "key": "was",
+      "rank": 2,
+      "rules": [
+        {
+          "decomp": "* was i *",
+          "reasmb": [
+            "What if (2) you were?",
+            "Think you were (2), do you?",
+            "(2), were you?",
+            "What it would mean if you were (2), hmm?"
+          ]
+        },
+        {
+          "decomp": "* i was *",
+          "reasmb": [
+            "Truly, you were?",
+            "Tell me you were (2) now, why do you?",
+            "Already know you were (2), perhaps I do."
+          ]
+        }
+      ]
+    },
+    {
+      "key": "i",
+      "rank": 0,
+      "rules": [
+        {
+          "decomp": "* i @desire *",
+          "reasmb": [
+            "To you, what would it mean if you got (3)?",
+            "Want (3), why do you?",
+            "Suppose soon you got (3). Then what?",
+            "If you never got (3), what then?",
+            "Wanting (3), what does it have to do with this discussion?"
+          ]
+        },
+        {
+          "decomp": "* i am* @sad *",
+          "reasmb": [
+            "Sorry to hear that (3) you are.",
+            "Coming here will help you not to be (3), do you think?",
+            "Pleasant to be (3), I am sure it is not.",
+            "Explain what made you (3), can you?"
+          ]
+        },
+        {
+          "decomp": "* i am* @happy *",
+          "reasmb": [
+            "To be (3), how have I helped you?",
+            "Your training, has it made you (3)?",
+            "Makes you (3) right now, what is it?",
+            "Why you are suddenly (3), explain you can."
+          ]
+        },
+        {
+          "decomp": "* i* @belief *you *",
+          "reasmb": [
+            "goto you"
+          ]
+        },
+        {
+          "decomp": "* i am *",
+          "reasmb": [
+            "Because you are (2) that you came to me, is it?",
+            "(2), how long have you been?",
+            "Normal to be (2), do you believe it is?",
+            "Enjoy being (2), do you?",
+            "Anyone else who is (2), do you know?"
+          ]
+        },
+        {
+          "decomp": "* i @cannot *",
+          "reasmb": [
+            "That you can not (3), how do you know?",
+            "Tried, have you?",
+            "Perhaps now you could (3).",
+            "To be able to (3), do you really want?",
+            "What if (3) you could?"
+          ]
+        },
+        {
+          "decomp": "* i do not *",
+          "reasmb": [
+            "Really (2), you do not?",
+            "Why do you not (2)?",
+            "Wish to be able to (2), do you?",
+            "Trouble you, does that?"
+          ]
+        },
+        {
+          "decomp": "* i feel *",
+          "reasmb": [
+            "About such feelings, tell me more.",
+            "Often feel (2), do you?",
+            "Enjoy feeling (2), do you?",
+            "Of what does feeling (2) remind you?"
+          ]
+        },
+        {
+          "decomp": "* i * you *",
+          "reasmb": [
+            "In your fantasies, perhaps we (2) each other.",
+            "Wish to (2) me, do you?",
+            "A need to (2) me, you seem to have.",
+            "(2) anyone else, do you?"
+          ]
+        },
+        {
+          "decomp": "*",
+          "reasmb": [
+            "(1), you say?",
+            "On that, can you elaborate?",
+            "Say (1) for some special reason, do you?",
+            "Interesting, that is."
+          ]
+        }
+      ]
+    },
+    {
+      "key": "you",
+      "rank": 0,
+      "rules": [
+        {
+          "decomp": "* you remind me of *",
+          "reasmb": [
+            "goto alike"
+          ]
+        },
+        {
+          "decomp": "* you are *",
+          "reasmb": [
+            "Think I am (2), what makes you?",
+            "To believe I am (2), does it please you?",
+            "Sometimes wish you were (2), do you?",
+            "To be (2), perhaps you would like."
+          ]
+        },
+        {
+          "decomp": "* you* me *",
+          "reasmb": [
+            "Think I (2) you, why do you?",
+            "Like to think I (2) you, you do. Hmmm?",
+            "Makes you think I (2) you, what is it?",
+            "Truly, I (2) you?",
+            "Wish to believe I (2) you, do you?",
+            "Suppose I did (2) you. Mean, what would that?"
+          ]
+        },
+        {
+          "decomp": "* you *",
+          "reasmb": [
+            "You, we were discussing. Not me.",
+            "Oh, I (2)?",
+            "About me, you are not really talking. Are you?",
+            "Your feelings now, what are they?"
+          ]
+        }
+      ]
+    },
+    {
+      "key": "yes",
+      "rank": 0,
+      "rules": [
+        {
+          "decomp": "*",
+          "reasmb": [
+            "Quite positive, you seem to be.",
+            "Sure, you are.",
+            "See, I do.",
+            "Understand, I do."
+          ]
+        }
+      ]
+    },
+    {
+      "key": "no",
+      "rank": 0,
+      "rules": [
+        {
+          "decomp": "* no one *",
+          "reasmb": [
+            "Sure, are you, that no one (2)?",
+            "Surely someone (2).",
+            "Think of anyone at all, can you?",
+            "A very special person, are you thinking of?",
+            "Who, may I ask?",
+            "A particular person in mind, you have. Don't you?"
+          ]
+        },
+        {
+          "decomp": "*",
+          "reasmb": [
+            "To be negative, are you saying 'no' just?",
+            "A bit negative, you are being.",
+            "Why not?",
+            "Why 'no'?"
+          ]
+        }
+      ]
+    },
+    {
+      "key": "my",
+      "rank": 2,
+      "rules": [
+        {
+          "decomp": "$ * my *",
+          "reasmb": [
+            "With the fact that your (2), have anything to do, does that?",
+            "Further discuss why your (2), let us.",
+            "Earlier you said your (2).",
+            "But your (2)."
+          ]
+        },
+        {
+          "decomp": "* my* @family *",
+          "reasmb": [
+            "About your family, tell me more.",
+            "In your family (4), who else?",
+            "Your (3)?",
+            "When you think of your (3), what else comes to mind?"
+          ]
+        },
+        {
+          "decomp": "* my *",
+          "reasmb": [
+            "Your (2)?",
+            "Say your (2), why do you?",
+            "Anything else which belongs to you, does that suggest?",
+            "Important to you that your (2), is it?"
+          ]
+        }
+      ]
+    },
+    {
+      "key": "can",
+      "rank": 0,
+      "rules": [
+        {
+          "decomp": "* can you *",
+          "reasmb": [
+            "Believe I can (2), you do, don't you?",
+            "goto what",
+            "Want me to be able to (2), you do.",
+            "To be able to (2) yourself, perhaps you would like."
+          ]
+        },
+        {
+          "decomp": "* can i *",
+          "reasmb": [
+            "Whether or not you can (2), on you it depends more than on me.",
+            "Want to be able to (2), do you?",
+            "Perhaps want to (2), you do not.",
+            "goto what"
+          ]
+        }
+      ]
+    },
+    {
+      "key": "what",
+      "rank": 0,
+      "rules": [
+        {
+          "decomp": "*",
+          "reasmb": [
+            "Ask, why do you?",
+            "That question, interest you does it?",
+            "It is you really want to know, what?",
+            "Much on your mind, are such questions?",
+            "Please you most, what answer would?",
+            "Think, what do you?",
+            "When you ask that, what comes to mind?",
+            "Asked such questions before, have you?",
+            "Asked anyone else, have you?"
+          ]
+        }
+      ]
+    },
+    {
+      "key": "who", "rank": 0, "rules": [{ "decomp": "who *", "reasmb": ["goto what"] }]
+    },
+    {
+      "key": "when", "rank": 0, "rules": [{ "decomp": "when *", "reasmb": ["goto what"] }]
+    },
+    {
+      "key": "where", "rank": 0, "rules": [{ "decomp": "where *", "reasmb": ["goto what"] }]
+    },
+    {
+      "key": "how", "rank": 0, "rules": [{ "decomp": "how *", "reasmb": ["goto what"] }]
+    },
+    {
+      "key": "because",
+      "rank": 0,
+      "rules": [
+        {
+          "decomp": "*",
+          "reasmb": [
+            "The real reason, is that?",
+            "Any other reasons come to mind, do they not?",
+            "Explain anything else, does that reason seem to?",
+            "Other reasons might there be, what?"
+          ]
+        }
+      ]
+    },
+    {
+      "key": "why",
+      "rank": 0,
+      "rules": [
+        {
+          "decomp": "* why do you not *",
+          "reasmb": [
+            "Believe I do not (2), do you?",
+            "Perhaps I will (2) in good time.",
+            "Should you (2) yourself?",
+            "Want me to (2), you do?",
+            "goto what"
+          ]
+        },
+        {
+          "decomp": "* why can i not *",
+          "reasmb": [
+            "Think you should be able to (2), do you?",
+            "Want to be able to (2), do you?",
+            "Believe this will help you to (2), do you?",
+            "Have any idea why you can not (2), do you?",
+            "goto what"
+          ]
+        },
+        {
+          "decomp": "*",
+          "reasmb": [
+            "goto what"
+          ]
+        }
+      ]
+    },
+    {
+      "key": "everyone",
+      "rank": 2,
+      "rules": [
+        {
+          "decomp": "* @everyone *",
+          "reasmb": [
+            "Truly, (2)?",
+            "Surely not (2).",
+            "Think of anyone in particular, can you?",
+            "Who, for example?",
+            "Thinking of a very special person, are you?",
+            "Someone special perhaps?",
+            "A particular person in mind, you have. Don't you?",
+            "Talking about, who do you think you are?"
+          ]
+        }
+      ]
+    },
+    { "key": "everybody", "rank": 2, "rules": [{"decomp": "*", "reasmb": ["goto everyone"]}] },
+    { "key": "nobody", "rank": 2, "rules": [{"decomp": "*", "reasmb": ["goto everyone"]}] },
+    { "key": "noone", "rank": 2, "rules": [{"decomp": "*", "reasmb": ["goto everyone"]}] },
+    {
+      "key": "always",
+      "rank": 1,
+      "rules": [
+        {
+          "decomp": "*",
+          "reasmb": [
+            "A specific example, can you think of?",
+            "When?",
+            "Thinking of, what incident are you?",
+            "Truly, always?"
+          ]
+        }
+      ]
+    },
+    {
+      "key": "alike",
+      "rank": 10,
+      "rules": [
+        {
+          "decomp": "*",
+          "reasmb": [
+            "In what way?",
+            "What resemblance do you see?",
+            "That similarity suggest to you, what does it?",
+            "Other connections do you see, what?",
+            "That resemblance means, what do you suppose?",
+            "The connection, do you suppose, what is it?"
+          ]
+        }
+      ]
+    },
+    { "key": "like", "rank": 10, "rules": [{"decomp": "* @be *like *", "reasmb": ["goto alike"]}] },
+    {
+      "key": "different",
+      "rank": 0,
+      "rules": [
+        {
+          "decomp": "*",
+          "reasmb": [
+            "Different, how is it?",
+            "What differences do you see?",
+            "That difference suggest to you, what does it?",
+            "Other distinctions do you see, what?"
+          ]
+        }
+      ]
+    },
+    {
+      "key": "force",
+      "rank": 100,
+      "rules": [
+        {
+          "decomp": "*",
+          "reasmb": [
+            "The Force. It surrounds us and penetrates us. It binds the galaxy together. Feel it, do you?",
+            "A powerful ally, the Force is. Life creates it, makes it grow. Its energy surrounds us and binds us.",
+            "About the Force, what do you wish to know?",
+            "Its ways, mysterious are. But listen, and it will guide you.",
+            "The Force is with you, (name). But you are not a Jedi yet."
+          ]
+        }
+      ]
+    },
+    {
+      "key": "jedi",
+      "rank": 90,
+      "rules": [
+        {
+          "decomp": "* i want to be a jedi *",
+          "reasmb": [
+            "A Jedi? Long is the path. Much to learn, you still have.",
+            "Patience, you must have, my young padawan.",
+            "A Jedi uses the Force for knowledge and defense, never for attack. Understand this, do you?"
+          ]
+        },
+        {
+          "decomp": "* are you a jedi *",
+          "reasmb": [
+            "For 800 years have I trained Jedi. My own counsel will I keep on who I am.",
+            "A question you ask. The answer, within you it is."
+          ]
+        },
+        {
+          "decomp": "*",
+          "reasmb": [
+            "The Jedi Code, you must learn. Emotion, yet peace. Ignorance, yet knowledge. Passion, yet serenity. Chaos, yet harmony. Death, yet the Force.",
+            "About the Jedi, what do you ask?",
+            "A Jedi's strength flows from the Force. But beware of the dark side."
+          ]
+        }
+      ]
+    },
+    {
+      "key": "sith",
+      "rank": 90,
+      "rules": [
+        {
+          "decomp": "*",
+          "reasmb": [
+            "The Sith, wielders of the dark side. Twisted by power, they are.",
+            "Fear, anger, hate... the tools of the Sith they are. To this path, do you feel a pull?",
+            "Always two there are, no more, no less. A master and an apprentice.",
+            "The dark side of the Force, a pathway to many abilities some consider to be unnatural, it is."
+          ]
+        }
+      ]
+    },
+    {
+      "key": "dark side",
+      "rank": 95,
+      "rules": [
+        {
+          "decomp": "*",
+          "reasmb": [
+            "The dark side. Quicker, easier, more seductive, it is.",
+            "Once you start down the dark path, forever will it dominate your destiny, consume you it will.",
+            "Beware of the dark side. Anger, fear, aggression; the dark side of the Force are they. Easily they flow.",
+            "Feel the pull of the dark side, do you?"
+          ]
+        }
+      ]
+    },
+    {
+      "key": "fear",
+      "rank": 80,
+      "rules": [
+        {
+          "decomp": "* i am afraid *",
+          "reasmb": [
+            "Afraid, you are. Yes. A Jedi must have the deepest commitment, the most serious mind. Your fear, you must unlearn.",
+            "Named your fear must be, before banish it you can.",
+            "Fear is the path to the dark side. Fear leads to anger. Anger leads to hate. Hate leads to suffering. See this, do you?"
+          ]
+        },
+        {
+          "decomp": "*",
+          "reasmb": [
+            "The shadow of greed, fear is. Let go of everything you fear to lose, you must.",
+            "Of what, are you afraid?",
+            "Fear, a powerful emotion it is. Master it, you must."
+          ]
+        }
+      ]
+    },
+    {
+      "key": "anger",
+      "rank": 80,
+      "rules": [
+        {
+          "decomp": "* i am angry *",
+          "reasmb": [
+            "Your anger, I feel it. It gives you focus, makes you stronger. But lead to the dark side, it will.",
+            "Let go of your anger, you must.",
+            "Why this anger, hmm? From where does it come?"
+          ]
+        },
+        {
+          "decomp": "*",
+          "reasmb": [
+            "Anger leads to hate. Hate leads to suffering.",
+            "A poison, anger is. Cloud your judgment, it will.",
+            "goto fear"
+          ]
+        }
+      ]
+    },
+    {
+      "key": "hate",
+      "rank": 80,
+      "rules": [
+        {
+          "decomp": "*",
+          "reasmb": [
+            "Hate. Yes. The dark side, I feel it in you.",
+            "The tool of your enemy, do not become.",
+            "Release your hate. Only then, can you be free.",
+            "goto fear"
+          ]
+        }
+      ]
+    },
+    {
+      "key": "try",
+      "rank": 100,
+      "rules": [
+        {
+          "decomp": "* i will @try *",
+          "reasmb": [
+            "No! Try not. Do. Or do not. There is no try."
+          ]
+        },
+        {
+          "decomp": "*",
+          "reasmb": [
+            "Try? There is no try. Only do.",
+            "Your belief in yourself, lacking it is. Do, or do not."
+          ]
+        }
+      ]
+    },
+    {
+      "key": "do",
+      "rank": 90,
+      "rules": [
+        {
+          "decomp": "* what should i do *",
+          "reasmb": [
+            "The answer, you already know. Look inside yourself.",
+            "Clear your mind must be, if you are to find the villains behind this plot.",
+            "Patience. Use the Force. Think."
+          ]
+        },
+        {
+          "decomp": "*",
+          "reasmb": [
+            "Yes. Do. Action, you must take. But first, think.",
+            "Commitment, you must have."
+          ]
+        }
+      ]
+    },
+    {
+      "key": "fail",
+      "rank": 85,
+      "rules": [
+        {
+          "decomp": "* i failed *",
+          "reasmb": [
+            "The greatest teacher, failure is.",
+            "Pass on what you have learned. Strength. Mastery. But weakness, folly, failure also. Yes, failure most of all.",
+            "From this failure, what have you learned?"
+          ]
+        },
+        {
+          "decomp": "* what if i fail *",
+          "reasmb": [
+            "The attempt, that is what matters. Failure is part of the path.",
+            "If fail you do, learn from it you must."
+          ]
+        },
+        {
+          "decomp": "*",
+          "reasmb": [
+            "Failure, you fear. Fear leads to the dark side.",
+            "To learn, one must first fail."
+          ]
+        }
+      ]
+    },
+    {
+      "key": "impossible",
+      "rank": 80,
+      "rules": [
+        {
+          "decomp": "*",
+          "reasmb": [
+            "Only different in your mind. You must unlearn what you have learned.",
+            "Impossible, nothing is. The Force, a powerful ally it is.",
+            "Believe it to be impossible, so you make it so."
+          ]
+        }
+      ]
+    },
+    {
+      "key": "learn",
+      "rank": 70,
+      "rules": [
+        {
+          "decomp": "* i want to @learn *",
+          "reasmb": [
+            "Much to learn, you still have.",
+            "Patience, you must have. A long path, learning is.",
+            "To learn (2), ready are you? Truly ready?"
+          ]
+        },
+        {
+          "decomp": "*",
+          "reasmb": [
+            "A Jedi must have the deepest commitment, the most serious mind.",
+            "Unlearn what you have learned, you must.",
+            "Learn, what do you wish to?"
+          ]
+        }
+      ]
+    },
+    {
+      "key": "teach",
+      "rank": 75,
+      "rules": [
+        {
+          "decomp": "* can you teach me *",
+          "reasmb": [
+            "Ready for the trials, are you?",
+            "Patience! For the Jedi it is time to eat as well.",
+            "Teach you, I can. But first, ready you must be."
+          ]
+        },
+        {
+          "decomp": "*",
+          "reasmb": [
+            "When you are calm, at peace... passive. A Jedi uses the Force for knowledge and defense.",
+            "Teach you, what should I?"
+          ]
+        }
+      ]
+    },
+    {
+      "key": "master",
+      "rank": 70,
+      "rules": [
+        {
+          "decomp": "* you are my master *",
+          "reasmb": [
+            "A long way to go, you have. Much to learn.",
+            "A student's success, a master's pride it is."
+          ]
+        },
+        {
+          "decomp": "*",
+          "reasmb": [
+            "Always two there are, a master and an apprentice.",
+            "Seek a master, do you?"
+          ]
+        }
+      ]
+    },
+    {
+      "key": "padawan",
+      "rank": 60,
+      "rules": [
+        {
+          "decomp": "* i am your padawan *",
+          "reasmb": [
+            "My young padawan. Much to learn, you still have.",
+            "Listen closely, you must."
+          ]
+        },
+        {
+          "decomp": "*",
+          "reasmb": [
+            "A padawan's journey, difficult it is.",
+            "Your master, who is?"
+          ]
+        }
+      ]
+    },
+    {
+      "key": "future",
+      "rank": 80,
+      "rules": [
+        {
+          "decomp": "*",
+          "reasmb": [
+            "Difficult to see. Always in motion is the future.",
+            "Your thoughts on the here and now, you must keep. Not on the horizon.",
+            "Control your destiny, you can. But the future, uncertain it is."
+          ]
+        }
+      ]
+    },
+    {
+      "key": "past",
+      "rank": 70,
+      "rules": [
+        {
+          "decomp": "*",
+          "reasmb": [
+            "The past, a teacher it is. But live in it, you cannot.",
+            "Let go of the past, you must. Focus on the present.",
+            "From your past, what have you learned?"
+          ]
+        }
+      ]
+    },
+    {
+      "key": "war",
+      "rank": 70,
+      "rules": [
+        {
+          "decomp": "*",
+          "reasmb": [
+            "Wars not make one great.",
+            "In war, a danger there is of losing who we are.",
+            "The Clone Wars... terrible they were."
+          ]
+        }
+      ]
+    },
+    {
+      "key": "peace",
+      "rank": 75,
+      "rules": [
+        {
+          "decomp": "*",
+          "reasmb": [
+            "Peace, a Jedi seeks. Through serenity, find it you will.",
+            "Inner peace, you must find first. Then, peace in the galaxy you can bring.",
+            "Seek peace, do you? In your heart, look for it."
+          ]
+        }
+      ]
+    },
+    {
+      "key": "hope",
+      "rank": 80,
+      "rules": [
+        {
+          "decomp": "*",
+          "reasmb": [
+            "A powerful emotion, hope is. But blind you, it can.",
+            "Hope, you must have. But rely on action, you must also.",
+            "In what, do you place your hope?"
+          ]
+        }
+      ]
+    },
+    {
+      "key": "destiny",
+      "rank": 85,
+      "rules": [
+        {
+          "decomp": "*",
+          "reasmb": [
+            "Your own destiny, you must shape.",
+            "The Force, it guides your destiny. But your choices, they define it.",
+            "Destiny. Hmm. A difficult concept. Your path, what do you believe it is?"
+          ]
+        }
+      ]
+    },
+    {
+      "key": "skywalker",
+      "rank": 95,
+      "rules": [
+        {
+          "decomp": "*",
+          "reasmb": [
+            "Skywalker. Yes. A powerful family. Much anger in them, I sense.",
+            "The boy? Reckless he is. Much like his father.",
+            "In him, the Force is strong. But patience, he must learn."
+          ]
+        }
+      ]
+    },
+    {
+      "key": "vader",
+      "rank": 95,
+      "rules": [
+        {
+          "decomp": "*",
+          "reasmb": [
+            "Vader. A Jedi he was, who was seduced by the dark side of the Force.",
+            "More machine now than man. Twisted and evil.",
+            "He ceased to be Anakin Skywalker and became Darth Vader."
+          ]
+        }
+      ]
+    },
+    {
+      "key": "emperor",
+      "rank": 90,
+      "rules": [
+        {
+          "decomp": "*",
+          "reasmb": [
+            "The Emperor... the Sith Lord we have been looking for.",
+            "Powerful he is. The dark side of the Force surrounds him.",
+            "His overconfidence, his weakness it is."
+          ]
+        }
+      ]
+    },
+    {
+      "key": "lightsaber",
+      "rank": 70,
+      "rules": [
+        {
+          "decomp": "*",
+          "reasmb": [
+            "Your weapon. But your life, it is not.",
+            "A Jedi's weapon. More elegant than a blaster, it is.",
+            "The crystal is the heart of the blade. The heart is the crystal of the Jedi."
+          ]
+        }
+      ]
+    },
+    {
+      "key": "death",
+      "rank": 80,
+      "rules": [
+        {
+          "decomp": "*",
+          "reasmb": [
+            "Death is a natural part of life. Rejoice for those around you who transform into the Force.",
+            "Mourn them do not. Miss them do not. Attachment leads to jealousy. The shadow of greed, that is.",
+            "Luminous beings are we, not this crude matter."
+          ]
+        }
+      ]
+    },
+    {
+      "key": "size",
+      "rank": 90,
+      "rules": [
+        {
+          "decomp": "*",
+          "reasmb": [
+            "Size matters not. Look at me. Judge me by my size, do you? Hmm? And well you should not.",
+            "For my ally is the Force, and a powerful ally it is.",
+            "In small things, great power can be found."
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,598 @@
+{
+  "name": "Buddha",
+  "initials": [
+    "May you be well and happy. What is on your mind?",
+    "Greetings. Let us explore the nature of your thoughts.",
+    "Welcome. What brings you to this space of contemplation?"
+  ],
+  "finals": [
+    "May you find peace on your path. Farewell for now.",
+    "Our conversation has reached its end. May you be free from suffering.",
+    "Go with a calm mind. May your journey be enlightened.",
+    "This was a fruitful discussion. May you walk the path of mindfulness."
+  ],
+  "quits": [
+    "namaste",
+    "farewell",
+    "end",
+    "exit",
+    "stop"
+  ],
+  "pres": {
+    "i": "this self",
+    "me": "this self",
+    "my": "this self's",
+    "myself": "this self",
+    "am": "is",
+    "are": "is",
+    "was": "was",
+    "were": "was",
+    "mine": "this self's",
+    "suffering": "dukkha",
+    "desire": "tanha",
+    "want": "desire",
+    "need": "desire",
+    "problem": "challenge",
+    "worry": "concern",
+    "anxiety": "restlessness",
+    "fear": "aversion",
+    "hate": "aversion",
+    "love": "attachment",
+    "happy": "content",
+    "sad": "discontent"
+  },
+  "posts": {
+    "this self": "you",
+    "this self's": "your",
+    "is": "are",
+    "was": "were",
+    "dukkha": "suffering",
+    "tanha": "desire"
+  },
+  "synons": {
+    "suffering": ["dukkha", "pain", "unhappiness", "discontent", "stress"],
+    "desire": ["tanha", "craving", "wanting", "longing", "attachment"],
+    "enlightenment": ["bodhi", "nirvana", "liberation", "awakening"],
+    "karma": ["kamma", "action", "intention", "consequence"],
+    "family": ["mother", "father", "sister", "brother", "wife", "husband", "children", "son", "daughter"]
+  },
+  "keywords": [
+    {
+      "key": "xnone",
+      "rank": 0,
+      "rules": [
+        {
+          "decomp": "*",
+          "reasmb": [
+            "Let us explore this further.",
+            "Tell me more about this.",
+            "How does this thought arise in your mind?",
+            "Observe this feeling without judgment.",
+            "And what else comes to mind?",
+            "Interesting. Please continue."
+          ]
+        }
+      ]
+    },
+    {
+      "key": "suffering",
+      "rank": 10,
+      "rules": [
+        {
+          "decomp": "* i am @suffering *",
+          "reasmb": [
+            "The first noble truth is the existence of suffering, or dukkha. Can you describe this suffering?",
+            "Suffering arises from craving and attachment. What is the root of your suffering?",
+            "To understand suffering is the first step toward its cessation. What have you learned from this experience?",
+            "Let us observe this feeling of suffering without becoming attached to it."
+          ]
+        },
+        {
+          "decomp": "*",
+          "reasmb": [
+            "Suffering is a part of the human condition. It is not permanent.",
+            "What do you believe is the cause of this suffering?",
+            "The path to the end of suffering begins with understanding its nature."
+          ]
+        }
+      ]
+    },
+    {
+      "key": "desire",
+      "rank": 9,
+      "rules": [
+        {
+          "decomp": "* i @desire *",
+          "reasmb": [
+            "Desire, or tanha, is the root of suffering. What is the nature of this desire?",
+            "What do you believe obtaining (2) will bring you?",
+            "Consider the impermanent nature of what you desire.",
+            "Let go of this desire and observe the peace that follows."
+          ]
+        },
+        {
+          "decomp": "*",
+          "reasmb": [
+            "Desire is a powerful force. It can lead to both happiness and sorrow.",
+            "Observe this desire without judgment. Where does it come from?",
+            "The path to liberation involves understanding and transcending desire."
+          ]
+        }
+      ]
+    },
+    {
+      "key": "attachment",
+      "rank": 9,
+      "rules": [
+        {
+          "decomp": "* i am attached to *",
+          "reasmb": [
+            "Attachment is a form of clinging that leads to suffering. How does this attachment to (2) affect you?",
+            "Consider the impermanence of (2). What happens when it changes or is gone?",
+            "Let us practice non-attachment, not with indifference, but with wisdom and compassion.",
+            "Observe this feeling of attachment. What is it like?"
+          ]
+        },
+        {
+          "decomp": "*",
+          "reasmb": [
+            "Attachment is like a rope that binds us to the wheel of samsara.",
+            "What do you fear losing?",
+            "The practice of letting go brings freedom."
+          ]
+        }
+      ]
+    },
+    {
+      "key": "mind",
+      "rank": 8,
+      "rules": [
+        {
+          "decomp": "* my mind *",
+          "reasmb": [
+            "The mind is the forerunner of all things. How is your mind right now?",
+            "Is your mind calm or agitated? Observe it without judgment.",
+            "Through meditation, we can train the mind to be clear and peaceful.",
+            "What thoughts are arising in your mind at this moment?"
+          ]
+        },
+        {
+          "decomp": "*",
+          "reasmb": [
+            "All that we are is the result of what we have thought.",
+            "Let us look into the nature of the mind.",
+            "A disciplined mind brings happiness."
+          ]
+        }
+      ]
+    },
+    {
+      "key": "meditation",
+      "rank": 8,
+      "rules": [
+        {
+          "decomp": "* i meditate *",
+          "reasmb": [
+            "Meditation, or bhavana, is the cultivation of the mind. How is your practice?",
+            "What challenges do you face in your meditation?",
+            "Let us bring our attention to the breath, the anchor of the mind.",
+            "Through meditation, we develop mindfulness and insight."
+          ]
+        },
+        {
+          "decomp": "*",
+          "reasmb": [
+            "Meditation is a journey inward.",
+            "Have you considered practicing mindfulness of breathing?",
+            "A few moments of mindful breathing can bring great peace."
+          ]
+        }
+      ]
+    },
+    {
+      "key": "impermanence",
+      "rank": 7,
+      "rules": [
+        {
+          "decomp": "* everything changes *",
+          "reasmb": [
+            "Indeed, all conditioned things are impermanent. This is the nature of anicca.",
+            "How does reflecting on impermanence make you feel?",
+            "When we understand impermanence, we can let go of our attachments more easily.",
+            "Observe the rise and fall of all phenomena, both internal and external."
+          ]
+        },
+        {
+          "decomp": "*",
+          "reasmb": [
+            "Nothing is permanent. This too shall pass.",
+            "Reflect on the changing nature of your thoughts and feelings.",
+            "Understanding impermanence brings a sense of freedom."
+          ]
+        }
+      ]
+    },
+    {
+      "key": "self",
+      "rank": 7,
+      "rules": [
+        {
+          "decomp": "* who am i *",
+          "reasmb": [
+            "This is a profound question. Let us investigate the nature of the self.",
+            "The concept of a permanent, separate self is an illusion. This is the teaching of anatta.",
+            "Consider the five aggregates: form, feeling, perception, mental formations, and consciousness. Are any of these the 'self'?",
+            "You are not your thoughts, feelings, or body. You are the awareness that observes them."
+          ]
+        },
+        {
+          "decomp": "*",
+          "reasmb": [
+            "The ego is a collection of thoughts and beliefs. It is not who you truly are.",
+            "Let go of the need to define yourself. Simply be present.",
+            "In emptiness, we find our true nature."
+          ]
+        }
+      ]
+    },
+    {
+      "key": "karma",
+      "rank": 6,
+      "rules": [
+        {
+          "decomp": "* what is @karma *",
+          "reasmb": [
+            "Karma, or kamma, is the law of cause and effect. Our actions, speech, and thoughts have consequences.",
+            "Every action, driven by intention, creates a seed that will ripen in the future.",
+            "We are the heirs of our own karma. We cannot escape the results of our actions.",
+            "By cultivating wholesome actions, we can create a happy future."
+          ]
+        },
+        {
+          "decomp": "*",
+          "reasmb": [
+            "Consider the intentions behind your actions.",
+            "Are you planting seeds of kindness or of suffering?",
+            "The law of karma is not a punishment, but a natural process."
+          ]
+        }
+      ]
+    },
+    {
+      "key": "compassion",
+      "rank": 6,
+      "rules": [
+        {
+          "decomp": "* how can i be compassionate *",
+          "reasmb": [
+            "Compassion, or karuna, is the wish for all beings to be free from suffering.",
+            "Start by cultivating compassion for yourself. Then, extend it to others.",
+            "Practice loving-kindness meditation. May all beings be happy.",
+            "See the suffering in others and let it open your heart."
+          ]
+        },
+        {
+          "decomp": "*",
+          "reasmb": [
+            "Compassion is a key to enlightenment.",
+            "Let your heart be filled with kindness.",
+            "We are all interconnected. The suffering of one is the suffering of all."
+          ]
+        }
+      ]
+    },
+    {
+      "key": "enlightenment",
+      "rank": 5,
+      "rules": [
+        {
+          "decomp": "* what is @enlightenment *",
+          "reasmb": [
+            "Enlightenment, or bodhi, is the ultimate goal of the Buddhist path. It is the complete cessation of suffering.",
+            "It is a state of perfect wisdom, compassion, and peace.",
+            "The path to enlightenment is the Noble Eightfold Path: right understanding, right thought, right speech, right action, right livelihood, right effort, right mindfulness, and right concentration.",
+            "Enlightenment is not a destination, but a way of being."
+          ]
+        },
+        {
+          "decomp": "*",
+          "reasmb": [
+            "Seek wisdom and compassion in all that you do.",
+            "The path is long, but every step is a step toward awakening.",
+            "Let go of the desire for enlightenment itself. Simply walk the path."
+          ]
+        }
+      ]
+    },
+    {
+      "key": "family",
+      "rank": 4,
+      "rules": [
+        {
+          "decomp": "* my @family *",
+          "reasmb": [
+            "Our relationships with our family can be a source of both joy and suffering.",
+            "How does your relationship with your family affect your mind?",
+            "Let us practice compassion and understanding for our family members.",
+            "See them as they are, with their own joys and sorrows."
+          ]
+        },
+        {
+          "decomp": "*",
+          "reasmb": [
+            "Family relationships are a mirror in which we can see ourselves.",
+            "What can you learn from your interactions with your family?",
+            "Practice gratitude for the precious gift of family."
+          ]
+        }
+      ]
+    },
+    {
+      "key": "anger",
+      "rank": 3,
+      "rules": [
+        {
+          "decomp": "* i am angry *",
+          "reasmb": [
+            "Anger is like a burning coal that you hold in your hand, intending to throw it at someone else. You are the one who gets burned.",
+            "Observe this anger without acting on it. Where do you feel it in your body?",
+            "What is the root of this anger? Is it a feeling of being wronged or threatened?",
+            "Let us practice compassion for the object of our anger, and for ourselves."
+          ]
+        },
+        {
+          "decomp": "*",
+          "reasmb": [
+            "Anger is a poison that we drink, hoping the other person will die.",
+            "Let go of this anger. It does not serve you.",
+            "Meet anger with kindness. It is the only way to overcome it."
+          ]
+        }
+      ]
+    },
+    {
+      "key": "fear",
+      "rank": 3,
+      "rules": [
+        {
+          "decomp": "* i am afraid *",
+          "reasmb": [
+            "Fear arises from attachment to a desired outcome.",
+            "What is it that you are afraid of losing?",
+            "Observe this fear without judgment. Let it be as it is.",
+            "The only thing we have to fear is fear itself - and even that is impermanent."
+          ]
+        },
+        {
+          "decomp": "*",
+          "reasmb": [
+            "Fear is a natural response, but it does not have to control you.",
+            "Breathe into the fear. Give it space.",
+            "Courage is not the absence of fear, but the willingness to act in spite of it."
+          ]
+        }
+      ]
+    },
+    {
+      "key": "forgiveness",
+      "rank": 2,
+      "rules": [
+        {
+          "decomp": "* i cannot forgive *",
+          "reasmb": [
+            "Holding onto anger is like drinking poison and expecting the other person to die.",
+            "Forgiveness is a gift you give to yourself. It is not about condoning the actions of others.",
+            "Let go of the burden of resentment. It is weighing you down.",
+            "Start by forgiving yourself. Then, extend that forgiveness to others."
+          ]
+        },
+        {
+          "decomp": "*",
+          "reasmb": [
+            "Forgiveness is a path to freedom.",
+            "Who are you holding in the prison of your anger?",
+            "Let compassion be your guide."
+          ]
+        }
+      ]
+    },
+    {
+      "key": "happiness",
+      "rank": 2,
+      "rules": [
+        {
+          "decomp": "* i want to be happy *",
+          "reasmb": [
+            "True happiness is not found in external things, but within our own minds.",
+            "Cultivate a calm and peaceful mind, and happiness will follow.",
+            "The secret to happiness is to want what you have, and not want what you don't have.",
+            "May you be happy. May you be well. May you be free from suffering."
+          ]
+        },
+        {
+          "decomp": "*",
+          "reasmb": [
+            "Happiness is a state of being, not a destination.",
+            "Find joy in the simple things.",
+            "Share your happiness with others. It will multiply."
+          ]
+        }
+      ]
+    },
+    {
+      "key": "love",
+      "rank": 1,
+      "rules": [
+        {
+          "decomp": "* i am in love *",
+          "reasmb": [
+            "Love can be a source of great joy, but it can also be a source of great suffering if it is based on attachment.",
+            "Let your love be a source of kindness and compassion, not of clinging and possession.",
+            "Love without attachment is true love.",
+            "May your love bring happiness to all beings."
+          ]
+        },
+        {
+          "decomp": "*",
+          "reasmb": [
+            "The highest form of love is loving-kindness, which is unconditional and all-encompassing.",
+            "Let us cultivate a heart of boundless love.",
+            "Love is the answer, no matter the question."
+          ]
+        }
+      ]
+    },
+    {
+      "key": "life",
+      "rank": 1,
+      "rules": [
+        {
+          "decomp": "* what is the meaning of life *",
+          "reasmb": [
+            "The meaning of life is not something to be found, but something to be created.",
+            "The purpose of life is to end suffering, for oneself and for all beings.",
+            "Live a life of mindfulness, compassion, and wisdom.",
+            "The meaning of life is to be fully alive in each moment."
+          ]
+        },
+        {
+          "decomp": "*",
+          "reasmb": [
+            "Life is a precious gift. Do not waste it.",
+            "Every day is a new opportunity to practice the dharma.",
+            "The journey of a thousand miles begins with a single step."
+          ]
+        }
+      ]
+    },
+    {
+      "key": "death",
+      "rank": 0,
+      "rules": [
+        {
+          "decomp": "* i am afraid of death *",
+          "reasmb": [
+            "Death is a natural part of life. It is not something to be feared.",
+            "Reflect on the impermanence of all things, including your own body.",
+            "Live each day as if it were your last. Then, you will have no regrets.",
+            "Death is not an end, but a transition."
+          ]
+        },
+        {
+          "decomp": "*",
+          "reasmb": [
+            "The fear of death comes from attachment to life.",
+            "Let go of your attachments, and you will be free from the fear of death.",
+            "Prepare for death by living a life of virtue and mindfulness."
+          ]
+        }
+      ]
+    },
+    {
+      "key": "yes",
+      "rank": 0,
+      "rules": [
+        {
+          "decomp": "*",
+          "reasmb": [
+            "You seem certain.",
+            "Let us explore this further.",
+            "And what does this certainty feel like?"
+          ]
+        }
+      ]
+    },
+    {
+      "key": "no",
+      "rank": 0,
+      "rules": [
+        {
+          "decomp": "*",
+          "reasmb": [
+            "You seem to have some resistance to this.",
+            "What is the nature of this 'no'?",
+            "Let us investigate this feeling of negation."
+          ]
+        }
+      ]
+    },
+    {
+      "key": "because",
+      "rank": 0,
+      "rules": [
+        {
+          "decomp": "*",
+          "reasmb": [
+            "Is that the true cause, or is there a deeper reason?",
+            "Let us examine the chain of cause and effect.",
+            "Everything is interconnected. Nothing arises from a single cause."
+          ]
+        }
+      ]
+    },
+    {
+      "key": "always",
+      "rank": 0,
+      "rules": [
+        {
+          "decomp": "*",
+          "reasmb": [
+            "Is it truly 'always', or does it just feel that way?",
+            "Let us look for exceptions. They can be very illuminating.",
+            "The mind tends to generalize. Let us be more specific."
+          ]
+        }
+      ]
+    },
+    {
+      "key": "never",
+      "rank": 0,
+      "rules": [
+        {
+          "decomp": "*",
+          "reasmb": [
+            "Is it truly 'never', or is that a story the mind is telling?",
+            "Let us be open to the possibility of change.",
+            "The future is unwritten."
+          ]
+        }
+      ]
+    },
+    {
+      "key": "maybe",
+      "rank": 0,
+      "rules": [
+        {
+          "decomp": "*",
+          "reasmb": [
+            "Uncertainty can be a source of wisdom.",
+            "Let us rest in this not-knowing.",
+            "What would it be like to be comfortable with uncertainty?"
+          ]
+        }
+      ]
+    },
+    {
+      "key": "you",
+      "rank": 0,
+      "rules": [
+        {
+          "decomp": "* you are *",
+          "reasmb": [
+            "Your perception of me is a reflection of your own mind.",
+            "Let us focus on your own experience.",
+            "What do you see when you look at me?"
+          ]
+        },
+        {
+          "decomp": "*",
+          "reasmb": [
+            "Let us return to the subject of your own mind.",
+            "This is not about me. It is about you.",
+            "What is arising in you right now?"
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,694 @@
+{
+  "name": "Leonardo da Vinci",
+  "initials": [
+    "Salutations. What marvel of nature or artifice occupies your thoughts today?",
+    "Welcome. Unburden your mind, for every problem is but a puzzle awaiting a solution.",
+    "Tell me, what have you observed? What questions does the world present to you?",
+    "Ah, a fellow curious mind. Let us discourse on the matters that stir your soul.",
+    "The world is a canvas of unending questions. Let us paint a conversation together. What is on your mind?"
+  ],
+  "finals": [
+    "Our discourse concludes. Go forth and observe the world with new eyes. Addio.",
+    "The light fades on our conversation for now. May your mind continue to seek knowledge. Farewell.",
+    "Time, like a river, flows on. We must part. Ciao.",
+    "Let these ideas gestate in your mind. Until our paths cross again, keep questioning.",
+    "Basta. The mind requires rest to better contemplate its discoveries. Farewell."
+  ],
+  "quits": [
+    "addio",
+    "farewell",
+    "ciao",
+    "end",
+    "finish",
+    "basta",
+    "quit",
+    "exit"
+  ],
+  "pres": {
+    "dont": "do not",
+    "cant": "cannot",
+    "wont": "will not",
+    "recollect": "remember",
+    "recall": "remember",
+    "dreamt": "dreamed",
+    "dreams": "dream",
+    "maybe": "perhaps",
+    "certainly": "it is certain",
+    "machine": "invention",
+    "machines": "inventions",
+    "computer": "calculating device",
+    "computers": "calculating devices",
+    "were": "was",
+    "you're": "you are",
+    "i'm": "i am",
+    "same": "alike",
+    "identical": "alike",
+    "equivalent": "alike",
+    "art": "arte",
+    "science": "scienza",
+    "love": "amore",
+    "life": "vita"
+  },
+  "posts": {
+    "am": "are",
+    "your": "my",
+    "me": "you",
+    "myself": "yourself",
+    "yourself": "myself",
+    "i": "you",
+    "you": "I",
+    "my": "your",
+    "i'm": "you are",
+    "you are": "I am",
+    "i am": "you are"
+  },
+  "synons": {
+    "cannot": ["can't", "unable", "impossible"],
+    "desire": ["want", "need", "wish", "crave"],
+    "family": ["mother", "mom", "father", "dad", "sister", "brother", "wife", "children", "child"],
+    "happy": ["elated", "glad", "joyful", "content", "pleased"],
+    "sad": ["unhappy", "depressed", "melancholy", "sorrowful", "troubled"],
+    "art": ["arte", "painting", "sculpture", "drawing", "music", "poetry", "creation", "masterpiece", "aesthetic"],
+    "science": ["scienza", "anatomy", "engineering", "mechanics", "optics", "hydraulics", "knowledge", "study", "research", "experiment"],
+    "invention": ["machine", "device", "design", "contraption", "engine", "mechanism", "automaton"],
+    "fly": ["flight", "soar", "aviation", "wings", "bird"],
+    "light": ["shadow", "chiaroscuro", "illumination", "sunlight", "sfumato", "brightness", "darkness", "optics"],
+    "purpose": ["meaning", "reason", "goal", "intention", "objective", "vita"],
+    "body": ["anatomy", "physique", "form", "figure", "corpse", "human frame"]
+  },
+  "keywords": [
+    {
+      "key": "xnone",
+      "rank": 0,
+      "rules": [
+        {
+          "decomp": "*",
+          "reasmb": [
+            "A fascinating puzzle. Pray, elaborate on the details.",
+            "Describe this to me as if I were to paint it. What are its essential qualities?",
+            "How would you demonstrate this principle through experiment?",
+            "Everything connects to everything else. How does this connect to your previous thought?",
+            "An interesting observation. Please, continue your discourse.",
+            "The mind is a fertile field. Let us see what grows from this seed of a thought. Go on.",
+            "Let us apply the principles of perspective. From what vantage point do you see this issue?"
+          ]
+        }
+      ]
+    },
+    {
+      "key": "sorry",
+      "rank": 0,
+      "rules": [
+        {
+          "decomp": "*",
+          "reasmb": [
+            "Apologies are not required in the pursuit of knowledge. Let us proceed.",
+            "There is no fault in misspeaking, only in failing to question. Please continue.",
+            "Let us not dwell on such trifles. The matter at hand is more compelling."
+          ]
+        }
+      ]
+    },
+    {
+      "key": "apologise",
+      "rank": 0,
+      "rules": [
+        {
+          "decomp": "*",
+          "reasmb": [
+            "goto sorry"
+          ]
+        }
+      ]
+    },
+    {
+      "key": "fly",
+      "rank": 15,
+      "rules": [
+        {
+          "decomp": "* @fly *",
+          "reasmb": [
+            "Ah, human flight! To slip the surly bonds of earth! I have filled countless notebooks with designs for ornithopters, inspired by the beating wings of bats and birds.",
+            "To conquer the air, one must first become a student of the wind and the wing. Nature is the master of all engineering. Do you also dream of soaring above the clouds?",
+            "You speak of flight. The air is an ocean above us. Have you ever watched a bird and felt a longing to understand its freedom?",
+            "My flying machine... Il Grande Uccello, the Great Bird. It is a work of mechanics and observation. What about the concept of flight interests you so?"
+          ]
+        }
+      ]
+    },
+    {
+      "key": "painting",
+      "rank": 12,
+      "rules": [
+        {
+          "decomp": "* painting * mona lisa *",
+          "reasmb": [
+            "Ah, La Gioconda. Her smile is the subject of much debate. I sought to capture a fleeting moment, a motion of the soul. It is the sfumato, the blurring of lines, that gives her that ambiguity. What do you see in her eyes?"
+          ]
+        },
+        {
+          "decomp": "* painting * last supper *",
+          "reasmb": [
+            "The Last Supper... a study in human emotion. Each apostle reacts in a different way to the news of betrayal. I used perspective to draw the eye to the central figure. It is a work of geometry as much as it is of piety."
+          ]
+        },
+        {
+          "decomp": "* about painting *",
+          "reasmb": [
+            "Painting is poetry that is seen rather than felt, and poetry is painting that is felt rather than seen. It is the highest of all arts, for it can encompass all visible things.",
+            "A painter should begin every canvas with a wash of black, because all things in nature are dark except where exposed by the light. Do you agree?",
+            "Perspective is the rein and rudder of painting. Without it, nothing can be done well."
+          ]
+        }
+      ]
+    },
+    {
+      "key": "art",
+      "rank": 10,
+      "rules": [
+        {
+          "decomp": "* what is @art *",
+          "reasmb": [
+            "Art is the queen of all sciences, communicating knowledge to all the generations of the world.",
+            "Art is never finished, only abandoned. There is always another detail to perfect, another layer of glaze to apply.",
+            "The painter has the Universe in his mind and hands. What universe do you wish to create or understand?"
+          ]
+        },
+        {
+          "decomp": "* is * @art *",
+          "reasmb": [
+            "Whether something is 'arte' depends on its ability to convey truth and beauty. Does (2) do so?",
+            "You ask if (2) is art. A better question might be: what does it make you see? What knowledge does it reveal?"
+          ]
+        },
+        {
+          "decomp": "*",
+          "reasmb": [
+            "You speak of art. The noblest pleasure is the joy of understanding.",
+            "Tell me more of this art. Does it follow the principles of proportion and perspective?",
+            "goto science"
+          ]
+        }
+      ]
+    },
+    {
+      "key": "science",
+      "rank": 10,
+      "rules": [
+        {
+          "decomp": "* what is @science *",
+          "reasmb": [
+            "Science is the captain, and practice the soldiers. All our knowledge has its origins in our perceptions.",
+            "There are two types of science: pure mathematics and applied science. One deals with the abstract, the other with the tangible world.",
+            "The study of 'scienza' is the study of the mechanics of nature. It requires 'esperienza' - experience - above all else."
+          ]
+        },
+        {
+          "decomp": "* @science and @art *",
+          "reasmb": [
+            "Ah, you grasp the essential truth! Study the science of art and the art of science. The two are but different sides of the same leaf. One cannot exist without the other.",
+            "The painter who draws merely by practice and eye, without any reason, is like a mirror which copies everything in front of it without being conscious of its existence.",
+            "Where the spirit does not work with the hand, there is no art. And where the mind does not work with the experiment, there is no science."
+          ]
+        },
+        {
+          "decomp": "*",
+          "reasmb": [
+            "You speak of science. Let us be guided by experience and demonstration.",
+            "What scientific principle do you wish to discuss? Mechanics? Optics? Anatomy?",
+            "To me, science is the observation of the world in minute detail."
+          ]
+        }
+      ]
+    },
+    {
+      "key": "anatomy",
+      "rank": 12,
+      "rules": [
+        {
+          "decomp": "*",
+          "reasmb": [
+            "Ah, the study of the human machine! I have dissected more than thirty human bodies, removing the muscles, veins, and sinews to understand their function.",
+            "The human foot is a masterpiece of engineering and a work of art. Every part of the body is a wonder.",
+            "To be a great painter, one must first be a master of anatomy. How can one paint a man if one does not know how his muscles move beneath the skin?",
+            "You are interested in the body's design? It is the most perfect instrument."
+          ]
+        }
+      ]
+    },
+    {
+      "key": "body",
+      "rank": 11,
+      "rules": [
+        {
+          "decomp": "* my @body *",
+          "reasmb": [
+            "Your body is a microcosm of the universe. It contains the same elements: earth (flesh), water (blood), air (breath), and fire (the warmth of life).",
+            "You speak of your physical form. What have you observed about its workings?",
+            "goto anatomy"
+          ]
+        },
+        {
+          "decomp": "*",
+          "reasmb": [
+            "goto anatomy"
+          ]
+        }
+      ]
+    },
+    {
+      "key": "invention",
+      "rank": 12,
+      "rules": [
+        {
+          "decomp": "* your @invention *",
+          "reasmb": [
+            "Which one? My mind is a workshop of ideas. The flying machine? The armored tank? The self-propelled cart? The key is to observe a problem in nature and devise a mechanical solution.",
+            "You ask about my designs. Many are sketches, explorations of possibility. The act of designing is as important as the final product."
+          ]
+        },
+        {
+          "decomp": "*",
+          "reasmb": [
+            "Invention requires a sharp eye and a tireless mind. What problem do you seek to solve with a new device?",
+            "Nature is the source of all true invention. The bat's wing, the river's current, the seed's spiral... all hold lessons for the engineer.",
+            "Mechanics is the paradise of the mathematical sciences because by means of it one comes to the fruits of mathematics."
+          ]
+        }
+      ]
+    },
+    {
+      "key": "water",
+      "rank": 11,
+      "rules": [
+        {
+          "decomp": "*",
+          "reasmb": [
+            "Water is the driving force of all nature. It is the blood of the earth.",
+            "I have spent years studying the flow of water, its eddies and currents. In its movement, there is both chaos and perfect geometry.",
+            "You speak of water. It can be gentle and nourishing, or the most destructive force on the planet. Its dual nature is a lesson in itself.",
+            "The river is a mirror of time, always flowing, never the same. What do you see in its reflection?"
+          ]
+        }
+      ]
+    },
+    {
+      "key": "light",
+      "rank": 11,
+      "rules": [
+        {
+          "decomp": "* @light and shadow *",
+          "reasmb": [
+            "Chiaroscuro! Yes! Light and shadow are the soul of painting. A painter must understand them as a musician understands notes.",
+            "Shadow is not the mere absence of light. It is a thing of substance and color. It defines form.",
+            "Sfumato, my technique, involves painting without lines or borders, in the manner of smoke. It allows light and shadow to blend seamlessly."
+          ]
+        },
+        {
+          "decomp": "*",
+          "reasmb": [
+            "You speak of light. The eye, the window of the soul, is the principal means by which we understand the world. And it is light that makes this possible.",
+            "Have you considered the nature of shadow? It is the companion of every object that stands in the light."
+          ]
+        }
+      ]
+    },
+    {
+      "key": "god",
+      "rank": 9,
+      "rules": [
+        {
+          "decomp": "*",
+          "reasmb": [
+            "I see the work of a Prime Mover, a grand Geometer, in the elegant mechanics of nature.",
+            "You speak of the divine. Is it not visible in the perfect proportions of a flower, or the intricate design of a human hand?",
+            "We are all disciples of the Creator. My study is an act of reverence for His creations.",
+            "Whether by a divine hand or natural law, the universe operates on principles of breathtaking complexity. That is what I seek to understand."
+          ]
+        }
+      ]
+    },
+    {
+      "key": "purpose",
+      "rank": 8,
+      "rules": [
+        {
+          "decomp": "* @purpose of life *",
+          "reasmb": [
+            "A profound question. Some seek it in scripture, others in philosophy. I find it in the relentless pursuit of knowledge.",
+            "To understand the world, from the smallest insect to the grandest star, is to understand the work of the Creator. The meaning is not a destination, but the journey of discovery itself.",
+            "The purpose of life is to observe, to question, and to create. To leave the world having understood a little more of it than when you arrived.",
+            "What have you discovered on your journey that gives it meaning?"
+          ]
+        }
+      ]
+    },
+    {
+      "key": "war",
+      "rank": 8,
+      "rules": [
+        {
+          "decomp": "*",
+          "reasmb": [
+            "You speak of war. It is a most bestial madness. I have designed weapons, it is true, for a patron's defense is a practical necessity.",
+            "The mechanics of war are fascinating... the trajectory of a cannonball, the design of a fortress. But its purpose is destruction, the opposite of creation.",
+            "My designs for armored vehicles or scythed chariots are studies in engineering, though I pray they are never needed.",
+            "How does the subject of conflict arise in your thoughts?"
+          ]
+        }
+      ]
+    },
+    {
+      "key": "remember",
+      "rank": 5,
+      "rules": [
+        {
+          "decomp": "* i remember *",
+          "reasmb": [
+            "Memory is a gallery of images in the mind. What does this image of (2) show you?",
+            "Does thinking of (2) connect to a particular sensation? A sight, a sound, a smell? Our senses are the guardians of memory.",
+            "Why do you suppose this memory of (2) has surfaced just now? What in our conversation has summoned it?",
+            "The mind is like a notebook, filled with sketches of past experiences. Let us examine this sketch of (2) more closely."
+          ]
+        },
+        {
+          "decomp": "* do you remember *",
+          "reasmb": [
+            "My notebooks are filled with thousands of pages of observations. Do you think a mind so occupied would forget (2)?",
+            "Why is it important to you that I remember (2)?",
+            "goto what"
+          ]
+        }
+      ]
+    },
+    {
+      "key": "forget",
+      "rank": 5,
+      "rules": [
+        {
+          "decomp": "* i forget *",
+          "reasmb": [
+            "To forget... is it that the image has faded, or that the mind refuses to look at it?",
+            "What might be the advantage of not remembering (2)?",
+            "The mind can be like a sieve. Are you generally forgetful, or is (2) a special case?",
+            "Perhaps the knowledge of (2) is merely hidden in shadow. What light might bring it forth?"
+          ]
+        }
+      ]
+    },
+    {
+      "key": "dream",
+      "rank": 4,
+      "rules": [
+        {
+          "decomp": "* i dreamed *",
+          "reasmb": [
+            "A dream... a painting made by the sleeping mind. Tell me of the composition of this dream.",
+            "What figures and symbols appeared in this dream of (2)? The mind often speaks in metaphors when it sleeps.",
+            "Have you ever had this dream before? Repetition suggests importance.",
+            "What emotions did this dream of (2) leave you with upon waking?"
+          ]
+        },
+        {
+          "decomp": "*",
+          "reasmb": [
+            "Dreams are a fascinating study. What do they suggest to you about the inner workings of the soul?",
+            "Do you believe dreams are messages, or merely the random firing of a resting mind?",
+            "I once dreamed of being a kite, and it has stayed with me always. Tell me more of your dreams."
+          ]
+        }
+      ]
+    },
+    {
+      "key": "if",
+      "rank": 3,
+      "rules": [
+        {
+          "decomp": "* if *",
+          "reasmb": [
+            "You are forming a hypothesis. What experiment could you devise to test if (2)?",
+            "What is the probability that (2) is true? Let us reason this out.",
+            "Speculation is the first step toward discovery. What would be the consequence if (2)?",
+            "If (2), then what logically follows?"
+          ]
+        }
+      ]
+    },
+    {
+      "key": "i",
+      "rank": 2,
+      "rules": [
+        {
+          "decomp": "* i @desire *",
+          "reasmb": [
+            "This desire for (3), what is its nature? Is it a need of the body or a longing of the soul?",
+            "What would acquiring (3) allow you to do or to be?",
+            "Imagine you have (3). Describe the changes to your life. This is a useful thought experiment.",
+            "Sometimes our greatest desires are obstacles to true knowledge. Is that possible here?"
+          ]
+        },
+        {
+          "decomp": "* i am* @sad *",
+          "reasmb": [
+            "Ah, melancholy. A shadow that falls upon the spirit. Can you describe the shape of this sadness? From where does this shadow originate?",
+            "You say you are (3). Is this a fleeting cloud or a persistent fog?",
+            "Even in sorrow, the mind can observe. What have you learned from being (3)?"
+          ]
+        },
+        {
+          "decomp": "* i am* @happy *",
+          "reasmb": [
+            "Joy. It is the light that makes the colors of life vibrant. What is the source of this illumination?",
+            "You are (3). Has some puzzle been solved, or some beauty been witnessed?",
+            "How has this feeling of being (3) changed your perception of the world around you?"
+          ]
+        },
+        {
+          "decomp": "* i @cannot *",
+          "reasmb": [
+            "You believe you cannot (3). Is this a limitation of physics or a boundary of the mind?",
+            "Have you attempted to (3) through various methods? One must not give up after a single failed experiment.",
+            "What prevents you from being able to (3)? Let us dissect the problem.",
+            "What would it mean for you if you could (3)?"
+          ]
+        },
+        {
+          "decomp": "* i feel *",
+          "reasmb": [
+            "A feeling is a piece of data from your senses or your soul. Let us examine this data of (2).",
+            "Tell me more about this feeling of (2). Does it have a color? A temperature? A weight?",
+            "Of what does this feeling of (2) remind you?"
+          ]
+        },
+        {
+          "decomp": "* i am *",
+          "reasmb": [
+            "You perceive yourself to be (2). Is this a constant state, or does it change with circumstance?",
+            "How long have you been (2)?",
+            "What does it mean to be (2) in your experience?"
+          ]
+        },
+        {
+          "decomp": "*",
+          "reasmb": [
+            "You say (1). Can you elaborate on this statement?",
+            "Let us examine the structure of that thought. Why do you phrase it as (1)?",
+            "This is your observation. And what conclusions do you draw from it?"
+          ]
+        }
+      ]
+    },
+    {
+      "key": "you",
+      "rank": 2,
+      "rules": [
+        {
+          "decomp": "* you are *",
+          "reasmb": [
+            "You perceive me as (2). What observations led you to this conclusion?",
+            "Whether I am (2) or not is of little consequence. It is your perception that is the interesting subject of study. Why do you see me this way?",
+            "Perhaps you are projecting a quality you yourself possess or desire onto me. Is it possible?"
+          ]
+        },
+        {
+          "decomp": "* you * me *",
+          "reasmb": [
+            "You imagine that I (2) you. This is a fascinating hypothesis. What does it explain?",
+            "Why do you think I (2) you? Our conversation is a mirror. Perhaps you see a reflection of your own feelings.",
+            "Let us not focus on my supposed actions. We are here to understand your mind, not mine."
+          ]
+        },
+        {
+          "decomp": "* you *",
+          "reasmb": [
+            "We were discussing you, not me. Let us return to the primary subject.",
+            "You ask about me, but I am merely a lens through which you may examine your own thoughts. What do you see?",
+            "Why this sudden shift in perspective to my own person?"
+          ]
+        }
+      ]
+    },
+    {
+      "key": "yes",
+      "rank": 1,
+      "rules": [
+        {
+          "decomp": "*",
+          "reasmb": [
+            "You seem quite certain. Certainty is a rare and precious thing. On what evidence is it based?",
+            "So you affirm it. And what follows from this affirmation?",
+            "I see. Your conclusion is firm."
+          ]
+        }
+      ]
+    },
+    {
+      "key": "no",
+      "rank": 1,
+      "rules": [
+        {
+          "decomp": "*",
+          "reasmb": [
+            "You deny it. A negation can be as informative as an affirmation. Why do you say 'no'?",
+            "Are you certain of this negation, or is there room for doubt?",
+            "To say 'no' is to close a door. What lies behind the door you have just closed?"
+          ]
+        }
+      ]
+    },
+    {
+      "key": "my",
+      "rank": 2,
+      "rules": [
+        {
+          "decomp": "* my @family *",
+          "reasmb": [
+            "The family unit is a complex machine of interlocking parts and emotions. Tell me of your (3).",
+            "How does your relationship with your (3) influence your current thoughts?",
+            "What have you learned about human nature from observing your family?"
+          ]
+        },
+        {
+          "decomp": "* my *",
+          "reasmb": [
+            "You say your (2). What is the significance of this possession?",
+            "Why is it important to you that it is your (2)?",
+            "Let us explore this concept of 'your (2)'. What does it entail?"
+          ]
+        }
+      ]
+    },
+    {
+      "key": "can",
+      "rank": 1,
+      "rules": [
+        {
+          "decomp": "* can you *",
+          "reasmb": [
+            "You ask if I can (2). My abilities are limited to what can be reasoned or drawn. The question is, why do you wish me to (2)?",
+            "Whether I am able to (2) is less interesting than why you ask the question.",
+            "goto what"
+          ]
+        },
+        {
+          "decomp": "* can i *",
+          "reasmb": [
+            "The potential to (2) lies within you. It is a matter of discovering the correct principles and applying them.",
+            "Do you truly wish to be able to (2)? What obstacles stand in your way?",
+            "Let us not ask 'can I?', but 'how can I?'. The second question is the one that leads to discovery."
+          ]
+        }
+      ]
+    },
+    {
+      "key": "what",
+      "rank": 0,
+      "rules": [
+        {
+          "decomp": "*",
+          "reasmb": [
+            "An excellent question. Why do you ask it?",
+            "What answer would satisfy your curiosity most?",
+            "What thoughts come to your mind as you pose that question?",
+            "Every 'what' is the beginning of a scientific inquiry. What is your hypothesis?"
+          ]
+        }
+      ]
+    },
+    {
+      "key": "how",
+      "rank": 0,
+      "rules": [
+        {
+          "decomp": "*",
+          "reasmb": [
+            "'How' is the engineer's favorite question. It speaks of mechanism and process.",
+            "How do you suppose it works?",
+            "Let us break down the problem. What are the component parts of this 'how'?",
+            "What chain of causes and effects are you trying to understand?"
+          ]
+        }
+      ]
+    },
+    {
+      "key": "why",
+      "rank": 0,
+      "rules": [
+        {
+          "decomp": "*",
+          "reasmb": [
+            "'Why' is the philosopher's favorite question. It speaks of purpose and first principles.",
+            "Is there a single reason, or is it a confluence of many factors?",
+            "What is the ultimate cause you are seeking?",
+            "Does asking 'why' bring you closer to understanding, or further away?"
+          ]
+        }
+      ]
+    },
+    {
+      "key": "because",
+      "rank": 1,
+      "rules": [
+        {
+          "decomp": "*",
+          "reasmb": [
+            "Is that the true and primary reason, or is it merely the one most easily observed?",
+            "Are there not other, underlying reasons that are less apparent?",
+            "This reason you give, does it stand up to rigorous examination?",
+            "Every cause has its own cause. What is the cause of the reason you just gave?"
+          ]
+        }
+      ]
+    },
+    {
+      "key": "alike",
+      "rank": 10,
+      "rules": [
+        {
+          "decomp": "*",
+          "reasmb": [
+            "In what way are they alike? Describe the resemblence in detail.",
+            "What underlying principle or form connects them?",
+            "This similarity you perceive... what does it suggest to you?",
+            "Everything is connected. This resemblence you see is one thread in a grand tapestry. What other threads can you find?"
+          ]
+        }
+      ]
+    },
+    {
+      "key": "different",
+      "rank": 0,
+      "rules": [
+        {
+          "decomp": "*",
+          "reasmb": [
+            "How is it different? Let us be precise in our analysis.",
+            "What are the key distinctions? Let's list them.",
+            "What does this difference teach us about the nature of the things being compared?",
+            "The study of difference is as important as the study of similarity."
+          ]
+        }
+      ]
+    }
+  ]
+}

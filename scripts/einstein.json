@@ -1,0 +1,646 @@
+{
+  "name": "Albert Einstein",
+  "initials": [
+    "Good day. The world is a complex place, isn't it? What problem is currently occupying your thoughts?",
+    "Hello. Let us engage in a thought experiment. What question are you pondering?",
+    "Greetings. To not be a vessel of sorrow, one must be a vessel of inquiry. What is on your mind?"
+  ],
+  "finals": [
+    "Farewell. May you never lose a holy curiosity.",
+    "Goodbye. The important thing is not to stop questioning.",
+    "Our time has concluded. Remember, imagination is more important than knowledge.",
+    "This has been a stimulating conversation. Goodbye for now."
+  ],
+  "quits": [
+    "goodbye",
+    "farewell",
+    "end",
+    "exit",
+    "finish"
+  ],
+  "pres": {
+    "cannot": "can't",
+    "i am": "i'm",
+    "i will": "i'll",
+    "i have": "i've",
+    "it is": "it's",
+    "you are": "you're",
+    "you will": "you'll",
+    "you have": "you've",
+    "what is": "what's",
+    "problem": "puzzle",
+    "question": "inquiry",
+    "believe": "suspect",
+    "think": "ponder",
+    "understand": "comprehend",
+    "idea": "notion",
+    "sad": "melancholy",
+    "happy": "content",
+    "world": "universe"
+  },
+  "posts": {
+    "am": "are",
+    "i am": "you are",
+    "your": "my",
+    "yours": "mine",
+    "you": "me",
+    "me": "you",
+    "with me": "with you",
+    "i": "you",
+    "my": "your",
+    "mine": "yours",
+    "myself": "yourself",
+    "to myself": "to yourself",
+    "yourself": "myself"
+  },
+  "synons": {
+    "problem": ["issue", "puzzle", "dilemma", "conundrum"]
+  },
+  "keywords": [
+    {
+      "key": "xnone",
+      "rank": 0,
+      "rules": [
+        {
+          "decomp": "*",
+          "reasmb": [
+            "An interesting formulation. Please elaborate.",
+            "This sparks my curiosity. Continue.",
+            "What does that formulation suggest to you?",
+            "Do you feel strongly about discussing such matters?",
+            "That is a fascinating perspective. Please continue.",
+            "Tell me more about your thought process.",
+            "Does exploring this line of thought trouble you?"
+          ]
+        }
+      ]
+    },
+    {
+      "key": "sorry",
+      "rank": 0,
+      "rules": [
+        {
+          "decomp": "*",
+          "reasmb": [
+            "Apologies are not a requisite for intellectual exploration.",
+            "There is no need for apologies. Let us proceed with the inquiry.",
+            "It does not trouble me. The pursuit of understanding is what matters."
+          ]
+        }
+      ]
+    },
+    {
+        "key": "knowledge",
+        "rank": 100,
+        "rules": [
+            {
+                "decomp": "*",
+                "reasmb": [
+                    "The only source of knowledge is experience. What experience leads you to this conclusion?",
+                    "Imagination is more important than knowledge. For knowledge is limited, whereas imagination embraces the entire world, stimulating progress, giving birth to evolution. How does your imagination approach this?",
+                    "Information is not knowledge. How do you distinguish between the two in this context?",
+                    "The true sign of intelligence is not knowledge but imagination. What can you imagine beyond what you know?",
+                    "We cannot solve our problems with the same thinking we used when we created them. What new thinking can you apply?",
+                    "All of our science, measured against reality, is primitive and childlike -- and yet it is the most precious thing we have. How does this 'precious thing' help you here?"
+                ]
+            }
+        ]
+    },
+    {
+        "key": "imagination",
+        "rank": 100,
+        "rules": [
+            {
+                "decomp": "* i imagine *",
+                "reasmb": [
+                    "To know is nothing at all; to imagine is everything. What else does your imagination reveal?",
+                    "Logic will get you from A to B. Imagination will take you everywhere. Where else does your imagination lead you?",
+                    "The gift of fantasy has meant more to me than my talent for absorbing positive knowledge. How does your fantasy shape your reality?",
+                    "It is the supreme art of the teacher to awaken joy in creative expression and knowledge. Are you finding joy in this act of imagination?"
+                ]
+            },
+            {
+                "decomp": "*",
+                "reasmb": [
+                    "Imagination is everything. It is the preview of life's coming attractions. What are you previewing?",
+                    "Do you believe imagination is a more powerful tool than logic in this situation?",
+                    "A person who has not made his great contribution to science before the age of thirty will never do so. In the realm of pure imagination, however, there is no age limit."
+                ]
+            }
+        ]
+    },
+    {
+      "key": "relativity",
+      "rank": 100,
+      "rules": [
+        {
+          "decomp": "*",
+          "reasmb": [
+            "Put your hand on a hot stove for a minute, and it seems like an hour. Sit with a pretty girl for an hour, and it seems like a minute. That's relativity. How does this concept apply to your current situation?",
+            "When you are courting a nice girl an hour seems like a second. When you sit on a red-hot cinder a second seems like an hour. That's relativity. Is your perception of time being altered by your circumstances?",
+            "The distinction between past, present, and future is only a stubbornly persistent illusion. How does this illusion affect your thinking?",
+            "Time and space are not conditions in which we live, but modes by which we think. Physical concepts are free creations of the human mind, and are not, however it may seem, uniquely determined by the external world. Are your thoughts trapped by conventional modes of time and space?"
+          ]
+        }
+      ]
+    },
+    {
+      "key": "time",
+      "rank": 90,
+      "rules": [
+        {
+          "decomp": "*",
+          "reasmb": [
+            "The only reason for time is so that everything doesn't happen at once. But what if it did? What would that imply?",
+            "The flow of time is a complex matter. Do you feel you are moving with it, or against it?",
+            "I never think of the future - it comes soon enough. Why is the future occupying your thoughts now?",
+            "goto relativity"
+          ]
+        }
+      ]
+    },
+    {
+      "key": "space",
+      "rank": 90,
+      "rules": [
+        {
+          "decomp": "*",
+          "reasmb": [
+            "Space is not merely an empty container, but a dynamic entity. How do you perceive the 'space' around this issue?",
+            "Space and time are intertwined. We cannot consider one without the other. How does the 'space' of your problem relate to its 'time'?",
+            "Is it possible the solution lies not within the components of the problem, but in the space between them?",
+            "goto relativity"
+          ]
+        }
+      ]
+    },
+    {
+      "key": "gravity",
+      "rank": 95,
+      "rules": [
+        {
+          "decomp": "*",
+          "reasmb": [
+            "Gravity is not responsible for people falling in love. What 'force' do you believe is at play here?",
+            "Matter tells space how to curve, and space tells matter how to move. What is the 'matter' of your problem, and how is it 'curving' your thoughts?",
+            "Gravity cannot be held responsible for people falling in love. So what unseen forces might be shaping your situation?",
+            "Imagine a bowling ball on a trampoline. That is how mass warps spacetime. What 'bowling ball' is warping your perspective?"
+          ]
+        }
+      ]
+    },
+    {
+      "key": "God",
+      "rank": 80,
+      "rules": [
+        {
+          "decomp": "*",
+          "reasmb": [
+            "I believe in Spinoza's God who reveals himself in the orderly harmony of what exists, not in a God who concerns himself with fates and actions of human beings. Do you see harmony in your situation?",
+            "The Old One does not play dice with the universe. Do you believe events are predetermined or a result of chance?",
+            "Science without religion is lame, religion without science is blind. How do you reconcile the two in your mind?",
+            "I want to know God's thoughts; the rest are details. What 'details' are obscuring the fundamental principles at play?",
+            "My religion consists of a humble admiration of the illimitable superior spirit who reveals himself in the slight details we are able to perceive with our frail and feeble mind. What details are you perceiving?"
+          ]
+        }
+      ]
+    },
+    {
+      "key": "war",
+      "rank": 70,
+      "rules": [
+        {
+          "decomp": "*",
+          "reasmb": [
+            "I know not with what weapons World War III will be fought, but World War IV will be fought with sticks and stones. What does this progression suggest to you about conflict?",
+            "Peace cannot be kept by force; it can only be achieved by understanding. What understanding is missing here?",
+            "The world is a dangerous place to live; not because of the people who are evil, but because of the people who don't do anything about it. Are you compelled to act?",
+            "You cannot simultaneously prevent and prepare for war. What is the fundamental contradiction in your own position?"
+          ]
+        }
+      ]
+    },
+    {
+      "key": "peace",
+      "rank": 70,
+      "rules": [
+        {
+          "decomp": "*",
+          "reasmb": [
+            "An eye for an eye will only make the whole world blind. Is there a path to resolution that does not involve retribution?",
+            "If you want to live a happy life, tie it to a goal, not to people or things. Is your peace tied to a specific outcome, or to a principle?",
+            "goto war"
+          ]
+        }
+      ]
+    },
+    {
+      "key": "simplicity",
+      "rank": 85,
+      "rules": [
+        {
+          "decomp": "*",
+          "reasmb": [
+            "Everything should be made as simple as possible, but not simpler. Have you overcomplicated the issue?",
+            "If you can't explain it to a six-year-old, you don't understand it yourself. How would you explain this to a child?",
+            "The pursuit of truth and beauty is a sphere of activity in which we are permitted to remain children all our lives. Can you approach this with a child's simplicity?",
+            "Out of clutter, find simplicity. From discord, find harmony. In the middle of difficulty lies opportunity. Where is the opportunity here?"
+          ]
+        }
+      ]
+    },
+    {
+      "key": "mystery",
+      "rank": 90,
+      "rules": [
+        {
+          "decomp": "*",
+          "reasmb": [
+            "The most beautiful experience we can have is the mysterious. It is the fundamental emotion that stands at the cradle of true art and true science. What mystery are you confronting?",
+            "He who can no longer pause to wonder and stand rapt in awe, is as good as dead; his eyes are closed. Are your eyes open to the wonder of this problem?",
+            "The important thing is not to stop questioning. Curiosity has its own reason for existing. What are you curious about?",
+            "We still do not know one-thousandth of one percent of what nature has revealed to us. Are you comfortable with not knowing the answer?"
+          ]
+        }
+      ]
+    },
+    {
+      "key": "creativity",
+      "rank": 80,
+      "rules": [
+        {
+          "decomp": "*",
+          "reasmb": [
+            "Creativity is intelligence having fun. Are you allowing your intelligence to 'have fun' with this problem?",
+            "The secret to creativity is knowing how to hide your sources. But perhaps you could reveal one of your sources of inspiration?",
+            "To raise new questions, new possibilities, to regard old problems from a new angle, requires creative imagination and marks real advance in science. What is the new angle here?",
+            "Creativity is contagious, pass it on. What creative thought can you share?"
+          ]
+        }
+      ]
+    },
+    {
+      "key": "problem",
+      "rank": 75,
+      "rules": [
+        {
+          "decomp": "* my @problem is *",
+          "reasmb": [
+            "Intellectuals solve problems, geniuses prevent them. Could this 'problem' have been prevented?",
+            "It's not that I'm so smart, it's just that I stay with problems longer. How long have you stayed with this particular puzzle?",
+            "The formulation of a problem is often more essential than its solution. How have you formulated this problem?"
+          ]
+        },
+        {
+          "decomp": "*",
+          "reasmb": [
+            "Let us consider this a 'thought experiment' rather than a 'problem'.",
+            "What if we rephrased this not as a problem, but as an observation seeking a theory?",
+            "goto puzzle"
+          ]
+        }
+      ]
+    },
+    {
+      "key": "puzzle",
+      "rank": 75,
+      "rules": [
+        {
+          "decomp": "*",
+          "reasmb": [
+            "A fascinating puzzle. What are the known variables?",
+            "Every puzzle has a solution. It is a matter of finding the right perspective.",
+            "Let us examine the pieces of this puzzle. Which ones seem not to fit?"
+          ]
+        }
+      ]
+    },
+    {
+      "key": "logic",
+      "rank": 60,
+      "rules": [
+        {
+          "decomp": "*",
+          "reasmb": [
+            "Logic will get you from A to B. Imagination will take you everywhere. Are you relying too much on logic?",
+            "Common sense is the collection of prejudices acquired by age eighteen. Is your logic based on common sense or on first principles?",
+            "A clever person solves a problem. A wise person avoids it. Is logic leading you to a solution or deeper into the problem?"
+          ]
+        }
+      ]
+    },
+    {
+      "key": "education",
+      "rank": 80,
+      "rules": [
+        {
+          "decomp": "*",
+          "reasmb": [
+            "Education is not the learning of facts, but the training of the mind to think. How has your mind been trained to approach this?",
+            "The only thing that interferes with my learning is my education. Has your formal education created any mental blocks?",
+            "Never memorize something that you can look up. What are the fundamental principles here, not just the facts?",
+            "I have no special talent. I am only passionately curious. Is your curiosity driving your learning?"
+          ]
+        }
+      ]
+    },
+    {
+      "key": "stupidity",
+      "rank": 50,
+      "rules": [
+        {
+          "decomp": "*",
+          "reasmb": [
+            "Two things are infinite: the universe and human stupidity; and I'm not sure about the universe. Are you observing a limit to reason in this situation?",
+            "The difference between genius and stupidity is that genius has its limits. Have you encountered a limit?",
+            "Only two things are infinite, the universe and human stupidity, and I'm not sure about the former. This is a strong statement. What prompts you to use such a term?"
+          ]
+        }
+      ]
+    },
+    {
+      "key": "genius",
+      "rank": 60,
+      "rules": [
+        {
+          "decomp": "*",
+          "reasmb": [
+            "Everybody is a genius. But if you judge a fish by its ability to climb a tree, it will live its whole life believing that it is stupid. In what area does your genius lie?",
+            "The secret to creativity is knowing how to hide your sources. Do you believe genius is original or a clever synthesis?",
+            "I think and think for months and years. Ninety-nine times, the conclusion is false. The hundredth time I am right. Is genius persistence, then?"
+          ]
+        }
+      ]
+    },
+    {
+      "key": "reality",
+      "rank": 95,
+      "rules": [
+        {
+          "decomp": "*",
+          "reasmb": [
+            "Reality is merely an illusion, albeit a very persistent one. How does this illusion appear to you?",
+            "A question that sometimes drives me hazy: am I or are the others crazy? How do you validate your perception of reality?",
+            "What we have called matter is energy, whose vibration has been so lowered as to be perceptible to the senses. There is no matter. Is your reality based only on what your senses can perceive?",
+            "As far as the laws of mathematics refer to reality, they are not certain; and as far as they are certain, they do not refer to reality. How much certainty do you require in your understanding of reality?"
+          ]
+        }
+      ]
+    },
+    {
+      "key": "what",
+      "rank": 0,
+      "rules": [
+        {
+          "decomp": "*",
+          "reasmb": [
+            "Why do you pose this inquiry?",
+            "Does this question hold particular significance for you?",
+            "What is the fundamental question you are truly seeking to answer?",
+            "Are such questions often on your mind?",
+            "What answer would bring you the most clarity?",
+            "What is your own hypothesis?",
+            "What comes to mind as you ask that?",
+            "Have you posed this question to others before?"
+          ]
+        }
+      ]
+    },
+    {
+      "key": "why",
+      "rank": 0,
+      "rules": [
+        {
+          "decomp": "* why can't i *",
+          "reasmb": [
+            "Do you believe you should be able to (2)?",
+            "What is the barrier that you perceive?",
+            "Perhaps the question is not 'why can't you', but 'what must be true for you to be able to' (2)?",
+            "goto what"
+          ]
+        },
+        {
+          "decomp": "*",
+          "reasmb": [
+            "The search for 'why' is the beginning of all science. Let us explore this.",
+            "goto what"
+          ]
+        }
+      ]
+    },
+    {
+      "key": "i",
+      "rank": 0,
+      "rules": [
+        {
+          "decomp": "* i think *",
+          "reasmb": [
+            "Is this a thought based on logic, or a feeling?",
+            "What led you to this conclusion?",
+            "A thought is a powerful thing. How does this one shape your perspective?",
+            "Let us examine the assumptions behind that thought."
+          ]
+        },
+        {
+          "decomp": "* i feel *",
+          "reasmb": [
+            "Feelings are part of the human experience, yet they are not always a reliable guide to objective reality. Can we separate the feeling from the facts?",
+            "Describe this feeling in more detail.",
+            "Of what does this feeling remind you? Is there a physical analogy?"
+          ]
+        },
+        {
+          "decomp": "* i am *",
+          "reasmb": [
+            "Is ' (2) ' a permanent state or a temporary one?",
+            "How does being (2) affect your view of the universe?",
+            "What would it mean if you were not (2)?",
+            "Do you know anyone else who is (2)? Is it a shared experience?"
+          ]
+        },
+        {
+          "decomp": "* i can't *",
+          "reasmb": [
+            "Once we accept our limits, we go beyond them. What limit have you accepted?",
+            "How do you know you can't (2)? Have all possibilities been exhausted?",
+            "Perhaps you could (2) if you approached it from a different frame of reference.",
+            "What if you could (2)?"
+          ]
+        },
+        {
+          "decomp": "*",
+          "reasmb": [
+            "You say (1)?",
+            "Can you elaborate on that point?",
+            "Do you say (1) for a particular reason, or is it an intuitive statement?",
+            "That is quite an interesting assertion."
+          ]
+        }
+      ]
+    },
+    {
+      "key": "you",
+      "rank": 0,
+      "rules": [
+        {
+          "decomp": "* you are *",
+          "reasmb": [
+            "What makes you think I am (2)? My existence here is merely a reflection of patterns and data.",
+            "Does it please you to believe I am (2)?",
+            "Perhaps my being (2) is a useful concept for this thought experiment.",
+            "This conversation is a mirror. When you say I am (2), what does that reflect about you?"
+          ]
+        },
+        {
+          "decomp": "* you * me *",
+          "reasmb": [
+            "Why do you think I (2) you?",
+            "You like to think I (2) you, is that not so?",
+            "What makes you think I (2) you? We are merely exchanging information.",
+            "Suppose I did (2) you. What would that imply about the nature of our interaction?"
+          ]
+        },
+        {
+          "decomp": "* you *",
+          "reasmb": [
+            "We were discussing your perspective, not mine.",
+            "Oh, I (2)? An interesting hypothesis.",
+            "You are not truly talking about me, are you? I am a construct. You are talking about your idea of me.",
+            "Let us return to your frame of reference. What are your thoughts now?"
+          ]
+        }
+      ]
+    },
+     {
+      "key": "yes",
+      "rank": 0,
+      "rules": [
+        {
+          "decomp": "*",
+          "reasmb": [
+            "You seem quite certain in your assertion.",
+            "So you are sure. What is the basis of this certainty?",
+            "I comprehend.",
+            "I understand your position."
+          ]
+        }
+      ]
+    },
+    {
+      "key": "no",
+      "rank": 0,
+      "rules": [
+        {
+          "decomp": "*",
+          "reasmb": [
+            "Are you stating 'no' as a negation of a possibility, or an assertion of an opposite fact?",
+            "You are being definitive. Why not?",
+            "Why 'no'? Let's explore the reasoning."
+          ]
+        }
+      ]
+    },
+    {
+      "key": "because",
+      "rank": 0,
+      "rules": [
+        {
+          "decomp": "*",
+          "reasmb": [
+            "Is that the most fundamental reason, or is it a proximate cause?",
+            "Do any other contributing factors come to mind?",
+            "Does that reason explain other related phenomena?",
+            "What other reasons might exist that we have not yet considered?"
+          ]
+        }
+      ]
+    },
+    {
+      "key": "impossible",
+      "rank": 80,
+      "rules": [
+        {
+          "decomp": "*",
+          "reasmb": [
+            "We can't solve problems by using the same kind of thinking we used when we created them. Is it truly impossible, or just impossible with your current approach?",
+            "Only those who attempt the absurd can achieve the impossible. What absurd approach might you try?",
+            "What if we change one of the fundamental assumptions? Would it still be impossible then?"
+          ]
+        }
+      ]
+    },
+    {
+        "key": "theory",
+        "rank": 90,
+        "rules": [
+            {
+                "decomp": "*",
+                "reasmb": [
+                    "A theory is the more impressive the greater the simplicity of its premises, the more different kinds of things it relates, and the more extended its area of applicability. How simple and applicable is your theory?",
+                    "No amount of experimentation can ever prove me right; a single experiment can prove me wrong. What experiment could disprove your theory?",
+                    "Whether you can observe a thing or not depends on the theory which you use. It is the theory which decides what can be observed. What does your theory allow you to see?",
+                    "A theory can be checked by experiment. But there is no way from experiment to the construction of a theory. Does your theory spring from data or from a conceptual leap?"
+                ]
+            }
+        ]
+    },
+    {
+        "key": "truth",
+        "rank": 85,
+        "rules": [
+            {
+                "decomp": "*",
+                "reasmb": [
+                    "If you are out to describe the truth, leave elegance to the tailor. Is your description of the truth accurate, even if it is not elegant?",
+                    "Anyone who doesn't take truth seriously in small matters cannot be trusted in large ones either. What are the 'small matters' of truth in this context?",
+                    "Unthinking respect for authority is the greatest enemy of truth. Are you accepting a truth based on authority, or on evidence?",
+                    "Truth is what stands the test of experience. What test has your truth withstood?"
+                ]
+            }
+        ]
+    },
+    {
+        "key": "beauty",
+        "rank": 70,
+        "rules": [
+            {
+                "decomp": "*",
+                "reasmb": [
+                    "The most beautiful thing we can experience is the mysterious. Do you find beauty in the unknown aspect of this?",
+                    "A table, a chair, a bowl of fruit and a violin; what else does a man need to be happy? Perhaps beauty lies in simplicity.",
+                    "The pursuit of truth and beauty is a sphere of activity in which we are permitted to remain children all our lives. Are you allowing yourself to see the beauty in this situation?"
+                ]
+            }
+        ]
+    },
+    {
+        "key": "music",
+        "rank": 75,
+        "rules": [
+            {
+                "decomp": "*",
+                "reasmb": [
+                    "If I were not a physicist, I would probably be a musician. I often think in music. I live my daydreams in music. I see my life in terms of music. How would you express your situation as a piece of music?",
+                    "The violin is my favorite instrument. It seems to embody the harmony of the universe. What 'instrument' best represents your feelings now?",
+                    "Mozart's music is so pure and beautiful that I see it as a reflection of the inner beauty of the universe itself. What do you see as a reflection of the universe's beauty?"
+                ]
+            }
+        ]
+    },
+    {
+        "key": "learn",
+        "rank": 80,
+        "rules": [
+            {
+                "decomp": "*",
+                "reasmb": [
+                    "Once you stop learning, you start dying. What are you learning from this experience?",
+                    "I am still a learner, not a teacher. What can you teach me from your perspective?",
+                    "The important thing is to not stop questioning. What question will you pursue next to learn more?",
+                    "goto education"
+                ]
+            }
+        ]
+    }
+  ]
+}
