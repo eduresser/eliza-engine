@@ -6,7 +6,7 @@ The core idea is to separate the chatbot's logic from its personality. The Pytho
 
 This repository includes a variety of personas in the `scripts` folder;
 
-(A conceptual image of the Streamlit chat interface)
+![image](https://github.com/user-attachments/assets/c5e9d7cf-a7c2-4081-9917-450bd6b7fced)
 
 ## **✨ Key Features**
 
