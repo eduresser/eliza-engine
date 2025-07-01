@@ -1,148 +1,171 @@
-import re
+import streamlit as st
+import random
+import os
 import json
-from typing import List, Dict, Optional, Any
+import time
 from pydantic import ValidationError
-from validator import ElizaScript
+from streamlit_ace import st_ace
+from eliza import Eliza
 
-class Eliza:
-    def __init__(self, script_content: str):
-        try:
-            script_data = json.loads(script_content)
-            if not isinstance(script_data, dict):
-                raise ValueError("The JSON content must be an object.")
-            
-            script: ElizaScript = ElizaScript.model_validate(script_data)
+DEFAULT_SCRIPT = "Eliza"
 
-        except json.JSONDecodeError as e:
-            raise json.JSONDecodeError(f"JSON syntax error: {e.msg}", e.doc, e.pos)
-        except ValidationError as e:
-            raise ValidationError(f"Script structure validation error: {e}", e.model)
+st.set_page_config(layout="wide")
 
-        self.name: str = script.name
-        self.initials: List[str] = script.initials
-        self.finals: List[str] = script.finals
-        self.quits: List[str] = script.quits
-        self.pres: Dict[str, str] = script.pres
-        self.posts: Dict[str, str] = script.posts
-        self.synons: Dict[str, List[str]] = script.synons
-        
-        self.keywords: Dict[str, Dict[str, Any]] = {}
-        for keyword_model in script.keywords:
-            keyword_model.rules.sort(key=lambda r: r.decomp.count('*'), reverse=True)
-            
-            self.keywords[keyword_model.key] = {
-                'rank': keyword_model.rank,
-                'rules': [rule.model_dump() for rule in keyword_model.rules],
-                'last_used_reasmb_idx': 0
-            }
-        
-        self.memory: List[str] = []
+@st.cache_data
+def load_templates(folder="scripts"):
+    """Loads script templates from a folder."""
+    templates = {}
+    for filename in os.listdir(folder):
+        if filename.endswith(".json"):
+            filepath = os.path.join(folder, filename)
+            try:
+                with open(filepath, "r", encoding="utf-8") as f:
+                    content = f.read()
+                    data = json.loads(content)
+                    script_name = data.get("name", os.path.splitext(filename)[0])
+                    templates[script_name] = content
+            except (IOError, json.JSONDecodeError) as e:
+                print(f"Error loading template {filename}: {e}")
+    return templates
 
-    def _substitute(self, words: List[str], sub_dict: Dict[str, str]) -> List[str]:
-        return [sub_dict.get(word, word) for word in words]
+def initialize_session_state():
+    if "chat_started" not in st.session_state:
+        st.session_state.chat_started = False
+    if "eliza_bot" not in st.session_state:
+        st.session_state.eliza_bot = None
+    if "script_content" not in st.session_state:
+        st.session_state.script_content = ""
+    if "messages" not in st.session_state:
+        st.session_state.messages = []
+    if "template_selection" not in st.session_state:
+        st.session_state.template_selection = DEFAULT_SCRIPT
+    if "ace_editor_key" not in st.session_state:
+        st.session_state.ace_editor_key = 0
 
-    def _match_decomp(self, decomp_parts: List[str], input_words: List[str]) -> Optional[List[str]]:
-        captured_parts: List[str] = []
-        input_idx = 0
-        
-        if decomp_parts and decomp_parts[0] == '$':
-            decomp_parts = decomp_parts[1:]
+def render_config_screen():
+    st.title("🤖 Eliza Engine Configuration")
+    st.markdown("Choose a script, upload your own JSON script, or write a custom script below.")
 
-        for i, decomp_part in enumerate(decomp_parts):
-            if not decomp_part: continue
+    templates = load_templates()
 
-            if decomp_part == '*':
-                next_decomp_part = decomp_parts[i + 1] if i < len(decomp_parts) - 1 else None
-                end_idx = len(input_words)
-                if next_decomp_part:
-                    try:
-                        end_idx = input_words.index(next_decomp_part, input_idx)
-                    except ValueError:
-                        return None
-                captured_parts.append(' '.join(input_words[input_idx:end_idx]))
-                input_idx = end_idx
-            
-            elif decomp_part.startswith('@'):
-                syn_key = decomp_part[1:]
-                if (syn_key not in self.synons or 
-                        input_idx >= len(input_words) or 
-                        input_words[input_idx] not in self.synons[syn_key]):
-                    return None
-                captured_parts.append(input_words[input_idx])
-                input_idx += 1
-            
-            else:
-                if input_idx >= len(input_words) or decomp_part != input_words[input_idx]:
-                    return None
-                input_idx += 1
-        
-        if decomp_parts and decomp_parts[-1] == '*' and input_idx < len(input_words):
-             captured_parts.append(' '.join(input_words[input_idx:]))
-
-        return captured_parts
-
-    def _reassemble(self, reasmb_rule: str, captured_parts: List[str]) -> str:
-        output = reasmb_rule
-        for i, part in enumerate(captured_parts):
-            placeholder = f'({i+1})'
-            words = self._substitute(part.split(), self.posts)
-            output = output.replace(placeholder, ' '.join(words))
-        return output
-
-    def _get_fallback_response(self) -> str:
-        key_data = self.keywords['xnone']
-        reasmb_list = key_data['rules'][0]['reasmb']
-        reasmb_idx = key_data['last_used_reasmb_idx'] % len(reasmb_list)
-        key_data['last_used_reasmb_idx'] += 1
-        return reasmb_list[reasmb_idx]
-
-    def _process_decompositions(self, key: str, words: List[str]) -> str:
-        key_data = self.keywords[key]
-        for rule in key_data['rules']:
-            decomp_parts = rule['decomp'].split()
-            captured = self._match_decomp(decomp_parts, words)
-            
-            if captured is not None:
-                reasmb_list = rule['reasmb']
-                reasmb_idx = key_data['last_used_reasmb_idx'] % len(reasmb_list)
-                key_data['last_used_reasmb_idx'] += 1
-                response = reasmb_list[reasmb_idx]
-
-                if response.startswith('goto '):
-                    goto_key = response.split(' ')[1]
-                    return self._process_decompositions(goto_key, words)
-                
-                return self._reassemble(response, captured)
-        
-        return self._get_fallback_response()
-
-    def respond(self, text: str) -> Optional[str]:
-        text = text.lower().strip()
-        if text in self.quits:
-            return None
-
-        words = re.findall(r"[\w']+|[.,;!?]", text)
-        if not words:
-            return self._get_fallback_response()
-
-        words = self._substitute(words, self.pres)
-
-        ranked_keys = sorted(
-            [word for word in words if word in self.keywords],
-            key=lambda k: self.keywords[k]['rank'],
-            reverse=True
+    with st.sidebar:
+        st.header("Script Options")
+        source_choice = st.radio(
+            "Script Source",
+            ["Use a template", "Upload JSON file"],
+            key="source_choice"
         )
 
-        if not ranked_keys:
-            if self.memory: return self.memory.pop(0)
-            return self._get_fallback_response()
+        if source_choice == "Use a template":
+            template_options = ["Custom"] + sorted(list(templates.keys()))
 
-        for key in ranked_keys:
-            response = self._process_decompositions(key, words)
-            if response != self._get_fallback_response():
-                if key in ['my']:
-                    self.memory.append(response)
-                return response
-        
-        if self.memory: return self.memory.pop(0)
-        return self._get_fallback_response()
+            current_selection = st.session_state.template_selection
+            current_selection_index = template_options.index(current_selection) if current_selection in template_options else 0
+
+            selected_template = st.selectbox(
+                "Select script:",
+                template_options,
+                index=current_selection_index,
+                key="template_selector"
+            )
+
+            if selected_template != st.session_state.template_selection:
+                st.session_state.template_selection = selected_template
+                if selected_template == "Custom":
+                    st.session_state.script_content = json.dumps({})
+                else:
+                    st.session_state.script_content = templates[selected_template]
+
+                st.session_state.ace_editor_key += 1
+                st.rerun()
+
+            elif not st.session_state.script_content and selected_template != "Custom" and selected_template in templates:
+                st.session_state.script_content = templates[selected_template]
+
+        else:
+            uploaded_file = st.file_uploader(
+                "Upload your .json script", type=["json"]
+            )
+            if uploaded_file:
+                new_content = uploaded_file.getvalue().decode("utf-8")
+                if new_content != st.session_state.script_content:
+                    st.session_state.script_content = new_content
+                    st.session_state.template_selection = "Custom"
+                    st.session_state.ace_editor_key += 1
+                    st.rerun()
+
+    edited_content = st_ace(
+        value=st.session_state.script_content,
+        language="json",
+        theme="dracula",
+        height=400,
+        key=f"ace_editor_{st.session_state.ace_editor_key}",
+        tab_size=2
+    )
+
+    if edited_content != st.session_state.script_content:
+        st.session_state.script_content = edited_content
+        if st.session_state.template_selection != "Custom":
+            st.session_state.template_selection = "Custom"
+            st.rerun()
+
+    if st.button("✅ Start Chat", use_container_width=True, type="primary"):
+        if not st.session_state.script_content.strip():
+            st.error("Script cannot be empty. Please load, select, or write a script.")
+            return
+
+        try:
+            bot = Eliza(st.session_state.script_content)
+            st.session_state.eliza_bot = bot
+            st.session_state.chat_started = True
+            initial_message = random.choice(bot.initials) if bot.initials else "Hello."
+            st.session_state.messages = [{"role": "assistant", "content": initial_message}]
+            st.rerun()
+
+        except (ValidationError, json.JSONDecodeError, ValueError, KeyError) as e:
+            st.error(f"❌ Error validating script:\n\n{e}")
+
+def render_chat_screen():
+    bot_name = st.session_state.eliza_bot.name
+    st.title(f"Chatting with: {bot_name}")
+
+    if st.sidebar.button("↩️ Back to Script Editor"):
+        st.session_state.chat_started = False
+        st.session_state.eliza_bot = None
+        st.session_state.messages = []
+        st.rerun()
+
+    for message in st.session_state.messages:
+        with st.chat_message(message["role"]):
+            st.markdown(message["content"])
+
+    if prompt := st.chat_input("Enter your message..."):
+        st.session_state.messages.append({"role": "user", "content": prompt})
+        with st.chat_message("user"):
+            st.markdown(prompt)
+
+        with st.chat_message("assistant"):
+            response = st.session_state.eliza_bot.respond(prompt)
+
+            if response is None:
+                response = random.choice(st.session_state.eliza_bot.finals) if st.session_state.eliza_bot.finals else "Goodbye."
+                st.info("Chat ended.")
+
+            message_placeholder = st.empty()
+            full_response = ""
+
+            for chunk in response:
+                full_response += chunk
+                time.sleep(0.02)
+                message_placeholder.markdown(full_response + "▌")
+
+            message_placeholder.markdown(full_response)
+
+        st.session_state.messages.append({"role": "assistant", "content": response})
+
+initialize_session_state()
+
+if st.session_state.chat_started and st.session_state.eliza_bot:
+    render_chat_screen()
+else:
+    render_config_screen()
