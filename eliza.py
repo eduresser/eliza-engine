@@ -13,7 +13,6 @@ st.set_page_config(layout="wide")
 
 @st.cache_data
 def load_templates(folder="scripts"):
-    """Loads script templates from a folder."""
     templates = {}
     for filename in os.listdir(folder):
         if filename.endswith(".json"):
