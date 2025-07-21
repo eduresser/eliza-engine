@@ -2,7 +2,7 @@ import streamlit as st
 import random
 import os
 import json
-import time # Importe a biblioteca time
+import time
 from pydantic import ValidationError
 from streamlit_ace import st_ace
 from eliza import Eliza
